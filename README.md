@@ -7,5 +7,5 @@
 - [pages](pages)下存放了两个文件,分别是
     - [main](pages/main)一个简陋的主页面的源代码
     - [signup](pages/signup)一个用jquery实现的注册页面(登录界面的代码应该是类似的,只需要修改少量代码即可)
-- [spider](pages/spider)一个用于爬取课程数据的简单爬虫
-- [other_file](pages/other_file)则保存了一些项目相关的非代码文件
+- [spider](spider)一个用于爬取课程数据的简单爬虫
+- [other_file](other_file)则保存了一些项目相关的非代码文件

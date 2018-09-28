@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4552fdca-073f-45b6-bad8-eaa5348bde44" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/爬虫(对课程数据进行整理)/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/crawler/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/爬虫(对课程数据进行整理)/hello.htm" beforeDir="false" afterPath="$PROJECT_DIR$/crawler/hello.htm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/爬虫(对课程数据进行整理)/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/crawler/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/页面/main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/main/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/页面/main/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/pages/main/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/页面/main/py知识图谱实例.png" beforeDir="false" afterPath="$PROJECT_DIR$/pages/main/py知识图谱实例.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/页面/regeister/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/pages/signup/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/页面/regeister/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/signup/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/页面/regeister/js/input.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/signup/js/input.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/页面/regeister/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/signup/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/页面/regeister/js/validator.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/signup/js/validator.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,14 +42,14 @@
         <counts>
           <entry key="css" value="264" />
           <entry key="html" value="366" />
-          <entry key="md" value="192" />
+          <entry key="md" value="281" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="264" />
           <entry key="HTML" value="366" />
-          <entry key="Markdown" value="192" />
+          <entry key="Markdown" value="281" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -82,7 +70,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="190">
-                <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+                <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
               </first_editor>
               <second_editor />
             </state>
@@ -122,9 +110,9 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="107" />
-    <option name="y" value="-9" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="452" />
+    <option name="y" value="77" />
     <option name="width" value="979" />
     <option name="height" value="1050" />
   </component>
@@ -158,11 +146,6 @@
               <item name="Software-engineering-discipline-online-learning-platform-based-on-knowledge-map" type="b2602c69:ProjectViewProjectNode" />
               <item name="Software-engineering-discipline-online-learning-platform-based-on-knowledge-map" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Software-engineering-discipline-online-learning-platform-based-on-knowledge-map" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Software-engineering-discipline-online-learning-platform-based-on-knowledge-map" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -174,7 +157,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538147256804" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538147372787" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -268,12 +251,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1538129406415</updated>
-      <workItem from="1538129407802" duration="8065000" />
+      <workItem from="1538129407802" duration="8362000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8065000" />
+    <option name="totallyTimeSpent" value="8362000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
@@ -354,10 +337,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crawler/hello.htm">
+    <entry file="file://$PROJECT_DIR$/spider/hello.htm">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/crawler/test.py">
+    <entry file="file://$PROJECT_DIR$/spider/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
           <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
@@ -392,7 +375,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="190">
-            <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+            <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
           </first_editor>
           <second_editor />
         </state>
