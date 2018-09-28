@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/normalize/8.0.0/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div class="wrap wrap-sm">
+    <div class="header">
+        <h1>注册</h1>
+    </div>
+    <div class="form">
+        <form id="signup">
+            <div class="input-wrap">
+                <label for="">姓名</label>
+                <input data-rule="maxlength:5|minlength:1"
+                       type="text"
+                       name="name"
+                       class="input-control">
+                <div id="name-input-error" class="input-error">姓名格式有误</div>
+            </div>
+            <div class="input-wrap">
+                <label for="">用户名</label>
+                <input data-rule='pattern:"^[a-zA-Z0-9]*$"|maxlength:8|minlength:4'
+                       type="text"
+                       name="username"
+                       class="input-control">
+                <div id="username-input-error" class="input-error">用户名格式有误</div>
+            </div>
+            <div class="input-wrap">
+                <label for="">年龄</label>
+                <input data-rule="min:18"
+                       type="text"
+                       name="age"
+                       class="input-control">
+                <div id="age-input-error" class="input-error">年龄格式有误</div>
+            </div>
+            <div class="input-wrap">
+                <label for="">密码</label>
+                <input data-rule="minlength:6|maxlength:64"
+                       type="password"
+                       name="password"
+                       class="input-control">
+                <div id="password-input-error" class="input-error">密码格式有误</div>
+            </div>
+            <div class="input-wrap">
+                <label for="">自我介绍</label>
+                <input data-rule="required:false|maxlength:1024"
+                       type="text"
+                       name="intro"
+                       class="input-control">
+                <div id="intro-input-error" class="input-error">自我介绍格式有误</div>
+            </div>
+            <button class="button-control" type="submit">注册</button>
+        </form>
+    </div>
+</div>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+<script src="js/validator.js"></script>
+<script src="js/input.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
