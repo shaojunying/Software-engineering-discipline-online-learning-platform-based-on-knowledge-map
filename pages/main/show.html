@@ -1,0 +1,141 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>力导向图</title>
+</head>
+
+<style>
+
+
+</style>
+<body>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script>
+    if (window.XMLHttpRequest)
+    {// code for IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp=new XMLHttpRequest();
+    }
+    else
+    {// code for IE6, IE5
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.open("GET","../../spider/data.xml",false);
+    xmlhttp.send();
+    xmlDoc=xmlhttp.responseXML;
+    nodes = [];
+    let data = xmlDoc.getElementsByTagName("name");
+
+    for (let i = 0;i < data.length;i++){
+        nodes.push({name:data[i].childNodes[0].nodeValue})
+    }
+    let edges = [];
+    data = xmlDoc.getElementsByTagName("item");
+    for (let i=0;i<data.length;i++){
+        edges.push({source:parseInt(data[i].childNodes[1].childNodes[0].nodeValue),
+            target:parseInt(data[i].childNodes[3].childNodes[0].nodeValue)})
+    }
+    console.log(edges);
+
+    // let edges = [  { source : 1  , target: 0 } , { source : 0  , target: 2 } ,
+    //     { source : 3  , target: 2 } , { source : 4  , target: 2 } ,
+    //     { source : 5  , target: 2 } , { source : 0  , target: 6 },
+    //     { source : 1  , target: 6 } , { source : 4  , target: 6 },
+    //     { source : 5  , target: 6 } , { source : 7  , target: 6 },   ];
+
+    let width = 2000;
+    let height = 920;
+
+
+    let svg = d3.select("body")
+        .append("svg")
+        .attr("width",width)
+        .attr("height",height);
+
+    let force = d3.layout.force()
+        .nodes(nodes)		//指定节点数组
+        .links(edges)		//指定连线数组
+        .size([width,height])	//指定范围
+        .linkDistance(150)	//指定连线长度
+        .charge(-2000);	//相互之间的作用力
+
+    force.start();	//开始作用
+
+    // console.log(nodes);
+    // console.log(edges);
+
+
+    //箭头
+    var marker=
+        svg.append("marker")
+        //.attr("id", function(d) { return d; })
+            .attr("id", "resolved")
+            //.attr("markerUnits","strokeWidth")//设置为strokeWidth箭头会随着线的粗细发生变化
+            .attr("markerUnits","userSpaceOnUse")
+            .attr("viewBox", "0 -5 10 10")//坐标系的区域
+            .attr("refX",32)//箭头坐标
+            .attr("refY", -1)
+            .attr("markerWidth", 12)//标识的大小
+            .attr("markerHeight", 12)
+            .attr("orient", "auto")//绘制方向，可设定为：auto（自动确认方向）和 角度值
+            .attr("stroke-width",2)//箭头宽度
+            .append("path")
+            .attr("d", "M0,-5L10,0L0,5")//箭头的路径
+            .attr('fill','#000000');//箭头颜色
+
+
+    //添加连线
+    let svg_edges = svg.selectAll("line")
+        .data(edges)
+        .enter()
+        .append("line")
+        .style("stroke","#ccc")
+        .style("stroke-width",1)
+        .attr("marker-end","url(#arrow)");
+
+    let color = d3.scale.category20();
+
+    //添加节点
+    let svg_nodes = svg.selectAll("circle")
+        .data(nodes)
+        .enter()
+        .append("circle")
+        .attr("r",20)
+        .style("fill",function(d,i){
+            return color(i);
+        })
+        .call(force.drag);	//使得节点能够拖动
+
+    //添加描述节点的文字
+    let svg_texts = svg.selectAll("text")
+        .data(nodes)
+        .enter()
+        .append("text")
+        .style("fill", "black")
+        .attr("dx", 20)
+        .attr("dy", 8)
+        .text(function(d){
+            return d.name;
+        });
+
+
+    force.on("tick", function(){	//对于每一个时间间隔
+
+        //更新连线坐标
+        svg_edges.attr("x1",function(d){ return d.source.x; })
+            .attr("y1",function(d){ return d.source.y; })
+            .attr("x2",function(d){ return d.target.x; })
+            .attr("y2",function(d){ return d.target.y; });
+
+        //更新节点坐标
+        svg_nodes.attr("cx",function(d){ return d.x; })
+            .attr("cy",function(d){ return d.y; });
+
+        //更新文字坐标
+        svg_texts.attr("x", function(d){ return d.x; })
+            .attr("y", function(d){ return d.y; });
+    });
+
+</script>
+
+</body>
+</html>
