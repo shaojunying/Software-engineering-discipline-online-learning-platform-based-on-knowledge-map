@@ -34,7 +34,6 @@ def save_course_name_and_detail_to_xml(courses, courses_name_xml):
     :param courses_name_xml: xml对象(课程信息将会保存到这里)
     :return: 课程名称和对应下标组成的字典
     """
-    global doc
     course_index = 0
     course_name_to_index = {}
     courses_name = courses["name"]
@@ -164,6 +163,12 @@ tags = ["数据库", "数据结构", "c语言", "Java", "Linux", "XML", "汇编语言", "软件
 
 
 def count_tags_occurrences_in_every_courses_details(courses_details, favorite_tags_index):
+    """
+    统计用户选择的标签在每个课程培养目标中出现的次数
+    :param courses_details: 每个课程的培养目标
+    :param favorite_tags_index: 用户选择的标签的下标
+    :return:
+    """
     tags_occurrences = []
     for course_index in range(len(courses_details)):
         tags_occurrences.append(0)
@@ -172,6 +177,23 @@ def count_tags_occurrences_in_every_courses_details(courses_details, favorite_ta
             tag_occurrences_in_one_class = courses_details[course_index].count(tags[favorite_tag_index])
             tags_occurrences[course_index] += tag_occurrences_in_one_class
     return tags_occurrences
+
+
+def sort_can_be_learned_courses_by_favorite_tags(learned_courses_index, can_be_selected_courses, tags_occurrences):
+    """
+    将用户没有选择且可以被选择的课程按照课程中包含用户选择的标签数量进行排序
+    :param learned_courses_index:已经学习的课程的下标
+    :param can_be_selected_courses:用户可以选择的课程的下标
+    :param tags_occurrences:用户选择的标签在每个课程介绍中出现的次数
+    :return:
+    """
+    unsort_result = {}
+    for can_be_selected_course in can_be_selected_courses:
+        if can_be_selected_course not in learned_courses_index:
+            unsort_result[can_be_selected_course] = tags_occurrences[can_be_selected_course]
+    # 按照标签数量对课程下标进行排序
+    result = sorted(unsort_result.items(), key=lambda item: -item[1])
+    return result
 
 
 def main():
@@ -184,8 +206,11 @@ def main():
 
     can_be_selected_courses = find_all_course_can_study(courses_name=courses["name"], adv_course_dict=adv_course_dict,
                                                         learned_courses=[])
-    tags_occurrences = count_tags_occurrences_in_every_courses_details(courses_details=courses["detail"], favorite_tags_index=[0, 1, 2])
-    print(tags_occurrences)
+    tags_occurrences = count_tags_occurrences_in_every_courses_details(courses_details=courses["detail"],
+                                                                       favorite_tags_index=[0, 1, 2, 4, 5, 6,7, 8])
+    print(sort_can_be_learned_courses_by_favorite_tags(learned_courses_index=[],
+                                                       can_be_selected_courses=can_be_selected_courses,
+                                                       tags_occurrences=tags_occurrences))
 
 
 if __name__ == '__main__':
