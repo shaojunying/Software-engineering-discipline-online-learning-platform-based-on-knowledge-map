@@ -30,11 +30,11 @@
     }
     let edges = [];
     data = xmlDoc.getElementsByTagName("item");
+    console.log("data"+data[0]);
     for (let i=0;i<data.length;i++){
         edges.push({source:parseInt(data[i].childNodes[1].childNodes[0].nodeValue),
             target:parseInt(data[i].childNodes[3].childNodes[0].nodeValue)})
     }
-    console.log(edges);
 
     // let edges = [  { source : 1  , target: 0 } , { source : 0  , target: 2 } ,
     //     { source : 3  , target: 2 } , { source : 4  , target: 2 } ,
@@ -59,9 +59,6 @@
         .charge(-2000);	//相互之间的作用力
 
     force.start();	//开始作用
-
-    // console.log(nodes);
-    // console.log(edges);
 
 
     //箭头

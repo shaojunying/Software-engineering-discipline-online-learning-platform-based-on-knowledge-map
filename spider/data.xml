@@ -126,10 +126,6 @@
 		</courses>
 		<adv-course>
 			<item>
-				<adv>0</adv>
-				<pre>-1</pre>
-			</item>
-			<item>
 				<adv>1</adv>
 				<pre>6</pre>
 			</item>

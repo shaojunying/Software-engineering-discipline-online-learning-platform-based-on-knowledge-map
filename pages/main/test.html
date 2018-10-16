@@ -45,7 +45,7 @@
     }
 
     let width = 1500,
-        height = 620;
+        height = 720;
 
     let force = d3.layout.force()//layout将json格式转化为力学图可用的格式
         .nodes(nodes)//设定节点数组
@@ -55,6 +55,7 @@
         .charge(-1500)//顶点的电荷数。该参数决定是排斥还是吸引，数值越小越互相排斥
         .on("tick", tick)//指时间间隔，隔一段时间刷新一次画面
         .start();//开始转换
+
 
     let svg = d3.select("body").append("svg")
         .attr("width", width)
