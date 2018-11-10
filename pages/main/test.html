@@ -37,7 +37,7 @@
     for (let i = 0;i < data.length;i++){
         nodes.push({name:data[i].childNodes[0].nodeValue})
     }
-    let links = [];
+    links = [];
     data = xmlDoc.getElementsByTagName("item");
     for (let i=0;i<data.length;i++){
         links.push({target:parseInt(data[i].childNodes[1].childNodes[0].nodeValue),

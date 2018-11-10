@@ -40,8 +40,9 @@ def save_course_name_and_detail_to_xml(courses, courses_name_xml):
     courses_detail = courses["detail"]
     for i in range(len(courses_name)):
         # 将课程名称存进xml结点中
-        create_node(node_parent=courses_name_xml, node_name="name", node_content=courses_name[i])
-        create_node(node_parent=courses_name_xml, node_name="details", node_content=courses_detail[i])
+        course_node_xml = create_node(node_parent=courses_name_xml,node_name="course")
+        create_node(node_parent=course_node_xml, node_name="name", node_content=courses_name[i])
+        create_node(node_parent=course_node_xml, node_name="details", node_content=courses_detail[i])
 
         # 将课程名称和对应的下标存储成一个dict
         course_name_to_index[courses_name[i]] = course_index
@@ -97,7 +98,7 @@ def save_course_adv_to_xml(adv_course_dict, courses_adv_xml):
             create_node(node_parent=node, node_name="pre", node_content=adv_course)
 
 
-def create_node(node_parent, node_name, node_content):
+def create_node(node_parent, node_name, node_content=None):
     """
     :param node_parent: 被添加元素的父节点
     :param node_name: 要添加的节点名称
@@ -106,8 +107,10 @@ def create_node(node_parent, node_name, node_content):
     """
     global doc
     node_adv = doc.createElement(node_name)
-    node_adv.appendChild(doc.createTextNode(str(node_content)))
+    if node_content is not None:
+        node_adv.appendChild(doc.createTextNode(str(node_content)))
     node_parent.appendChild(node_adv)
+    return node_adv
 
 
 def save_xml_to_file():
