@@ -11,8 +11,15 @@
         text-align: center;
         font-family: OpenSans-Light, PingFang SC, Hiragino Sans GB, Microsoft Yahei, Microsoft Jhenghei, sans-serif;
     }
+
+
+    #info p{
+        font-size: 13px;
+    }
+
     .nodes circle {
-        stroke: #ffffff;
+        fill: rgba(108,164,108);
+        stroke: rgba(255,255,255);
         stroke-width: 1.5px;
     }
 
@@ -21,30 +28,67 @@
         stroke-opacity: 0.8;
     }
 
-    .links line.inactive,
-    .nodes circle.inactive,
+    .nodes circle.inactive{
+        fill: rgba(108,164,108,.3);
+        stroke: rgba(255,255,255,.3);
+    }
     .texts text.inactive
     {
         display: none;
     }
 
+    .links line.inactive{
+        display: none;
+    }
 
+
+    #title{
+        position: absolute;
+        top: 50px;
+        left: 60px;
+        color: #ffffff;
+    }
+
+
+    #search1 input {
+        position: absolute;
+        top: 220px;
+        left: 60px;
+        color: #fff;
+        border: none;
+        /*outline: none;*/
+        /*box-shadow: none;*/
+        width: 200px;
+        background-color: #666;
+    }
 
     .texts text {
         /*display: none;*/
-        color: red;
+        color: #ffffff;
     }
     .texts text:hover {
         cursor: pointer;
     }
 
+    #info{
+        position: absolute;
+        bottom: 40px;
+        right: 30px;
+        /*text-align: right;*/
+        width: 270px;
+        color: #ffffff;
+    }
 
 </style>
 <body>
-    <div>
+    <div style="text-align: center;position:relative;">
+        <h1 id="title">大创知识图谱</h1>
         <svg width="800" height="560" id="svg1"></svg>
         <div id="search1">
             <input type="text" class="form-control">
+        </div>
+        <div id="info">
+            <h4></h4>
         </div>
     </div>
 
@@ -60,7 +104,7 @@
         .force("link", d3.forceLink().id(function(d) {
             return d.index;
         }))
-        .force('collide', d3.forceCollide().radius(() => 10)) // collide 为节点指定一个radius区域来防止节点重叠。
+        .force('collide', d3.forceCollide().radius(() => 40)) // collide 为节点指定一个radius区域来防止节点重叠。
         .force("charge", d3.forceManyBody().strength(-200))
         .force("center", d3.forceCenter(width / 2, height / 2-70));
     if (window.XMLHttpRequest)
@@ -77,9 +121,12 @@
 
     // 设置节点
     nodes = [];
-    let data = xmlDoc.getElementsByTagName("name");
+    let data = xmlDoc.getElementsByTagName("course");
     for (let i = 0;i < data.length;i++){
-        nodes.push({name:data[i].childNodes[0].nodeValue})
+        nodes.push({
+            name:data[i].childNodes[1].innerHTML,
+            description:data[i].childNodes[3].innerHTML
+        })
     }
 
     let node = svg.append("g")
@@ -88,11 +135,13 @@
         .data(nodes)
         .enter().append("circle")
         .attr("r", 20)
-        .attr("fill", function(d) {
-            // return color(d.group);
-            return "#6ca46c";
+        .attr('name',function (d) {
+            return d.name;
         })
-        .attr('stroke', 'none')
+        .attr('description',function (d) {
+            return d.description
+        })
+        .attr('class','inactive')
         .call(d3.drag()
             .on("start", dragstarted)
             .on("drag", dragged)
@@ -136,9 +185,8 @@
         .selectAll("line")
         .data(edges)
         .enter().append("line")
-        .attr("stroke-width",function (d) {
-            return 1;
-        });
+        .attr('class','inactive')
+        .attr("stroke-width",'1');
     simulation.force("link")
         .links(edges);
 
@@ -154,11 +202,9 @@
         })
         .attr("fill", function(d) {
             // return color(d.group);
-            return "#ff0000";
+            return "rgba(255,255,255)";
         })
-        .attr('name', function(d) {
-            return d.name;
-        })
+        .attr('class','inactive')
         .text(function(d) {
             return d.name;
         })
@@ -225,9 +271,6 @@
                     return 'inactive';
                 }
 
-
-
-
             });
             d3.select('#svg1 .texts').selectAll('text').attr('class', function (d) {
 
@@ -255,6 +298,61 @@
             });
         }
     });
+
+    // 处理鼠标悬浮的情况
+    $('#svg1').on('mouseenter','.nodes circle',function (event) {
+        if (!dragging) {
+            // 获取当前课程的名字
+            let name = $(this)[0].attributes.name.nodeValue;
+            $('#info h4').text("课程名称: " + name);
+            $('#info p').remove();
+
+            $('#info').append("<p>课程描述:<span>"+$(this)[0].attributes[2].nodeValue+'</span></p>');
+
+            d3.select('#svg1 .nodes').selectAll('circle')
+                .attr("class", function (d) {
+                    if (d.name == name) {
+                        return "";
+                    }
+                    for (let i = 0; i < edges.length; i++) {
+                        if (edges[i]['source'].name == name && edges[i]['target'].name == d.name) {
+                            return '';
+                        }
+                        if (edges[i]['target'].name == name && edges[i]['source'].name == d.name) {
+                            return '';
+                        }
+                    }
+                    return "inactive";
+                });
+
+            d3.select('#svg1 .texts').selectAll('text')
+                .attr("class", function (d) {
+                    if (d.name==name) {
+                        return '';
+                    } else {
+                        for (let i = 0; i < edges.length; i++) {
+                            if (edges[i]['source'].name==d.name  && edges[i]['target'].name==name) {
+                                return '';
+                            }
+                            if (edges[i]['target'].name==d.name&& edges[i]['source'].name==name ) {
+                                return '';
+                            }
+                        }
+                    }
+                    return 'inactive';
+                });
+
+            d3.select("#svg1 .links").selectAll('line').attr('class', function (d) {
+                for (let i = 0; i < edges.length; i++) {
+                    if (d['source'].name==name||d['target'].name==name) {
+                        return '';
+                    }
+                }
+                return 'inactive';
+            });
+        }
+    });
+
 </script>
 
 </body>
