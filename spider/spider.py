@@ -1,8 +1,8 @@
 # coding=gbk
 import re
 import xml.dom.minidom
+
 from pyquery import PyQuery as pq
-from jieba.analyse import *
 
 doc = xml.dom.minidom.Document()
 

@@ -25,7 +25,7 @@
 
     .links line {
         stroke: rgb(240,240,240);
-        stroke-opacity: 0.8;
+        /*stroke-opacity: 0.3;*/
     }
 
     .nodes circle.inactive{
@@ -64,6 +64,7 @@
 
     .texts text {
         /*display: none;*/
+        font-size: 13px;
         color: #ffffff;
     }
     .texts text:hover {
@@ -93,8 +94,9 @@
     </div>
 
     <script src="https://d3js.org/d3.v4.min.js"></script>
-    <script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
 <script>
+    $(document).ready(function () {
     //选中要显示我们可视化图像的元素
     let svg = d3.select("#svg1"),
         width = +svg.attr("width"),
@@ -104,9 +106,9 @@
         .force("link", d3.forceLink().id(function(d) {
             return d.index;
         }))
-        .force('collide', d3.forceCollide().radius(() => 40)) // collide 为节点指定一个radius区域来防止节点重叠。
-        .force("charge", d3.forceManyBody().strength(-200))
-        .force("center", d3.forceCenter(width / 2, height / 2-70));
+        .force('collide', d3.forceCollide().radius(() => 10)) // collide 为节点指定一个radius区域来防止节点重叠。
+        .force("charge", d3.forceManyBody().strength(-150))
+        .force("center", d3.forceCenter(width / 2, height / 2-60));
     if (window.XMLHttpRequest)
     {// code for IE7+, Firefox, Chrome, Opera, Safari
         xmlhttp=new XMLHttpRequest();
@@ -129,24 +131,6 @@
         })
     }
 
-    let node = svg.append("g")
-        .attr("class", "nodes")
-        .selectAll("circle")
-        .data(nodes)
-        .enter().append("circle")
-        .attr("r", 20)
-        .attr('name',function (d) {
-            return d.name;
-        })
-        .attr('description',function (d) {
-            return d.description
-        })
-        .attr('class','inactive')
-        .call(d3.drag()
-            .on("start", dragstarted)
-            .on("drag", dragged)
-            .on("end", dragended));
-
     let dragging = false;
 
     function dragstarted(d) {
@@ -168,9 +152,6 @@
         dragging = false;
     }
 
-    simulation
-        .nodes(nodes)
-        .on("tick", ticked);
 
     // 设置节点之间的连线
     edges = [];
@@ -185,8 +166,29 @@
         .selectAll("line")
         .data(edges)
         .enter().append("line")
-        .attr('class','inactive')
         .attr("stroke-width",'1');
+
+    let node = svg.append("g")
+        .attr("class", "nodes")
+        .selectAll("circle")
+        .data(nodes)
+        .enter().append("circle")
+        .attr("r", 20)
+        .attr('name',function (d) {
+            return d.name;
+        })
+        .attr('description',function (d) {
+            return d.description
+        })
+        // .attr('class','inactive')
+        .call(d3.drag()
+            .on("start", dragstarted)
+            .on("drag", dragged)
+            .on("end", dragended));
+
+    simulation
+        .nodes(nodes)
+        .on("tick", ticked);
     simulation.force("link")
         .links(edges);
 
@@ -352,6 +354,8 @@
             });
         }
     });
+    })
+
 
 </script>
 
