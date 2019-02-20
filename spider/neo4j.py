@@ -1,6 +1,4 @@
 # -*- coding: utf-8 -*-
-from flask import Flask, request
-from pandas import DataFrame
 from py2neo import *
 from xml.dom import minidom as minidom
 
@@ -25,6 +23,20 @@ def get_all_sub_element_node(node):
         if sub_node.nodeType == minidom.Node.TEXT_NODE:
             continue
         yield sub_node
+
+
+def get_all_courses_name_and_details():
+    dom = minidom.parse("data.xml")
+    root = dom.documentElement
+    # 获得所有课程节点的父节点
+    courses_nodes = root.getElementsByTagName('courses')
+    courses_name = []
+    courses_details = []
+    # 获取所有课程节点
+    for course_node in get_all_sub_element_node(courses_nodes[0]):
+        courses_name.append(get_xml_text_node_value(course_node, 'name'))
+        courses_details.append(get_xml_text_node_value(course_node, 'details'))
+    return courses_name, courses_details
 
 
 def save_all_course_info():
@@ -75,14 +87,13 @@ def main():
     # print(df)
 
 
-app = Flask(__name__)
-
-
-@app.route('/')
-def hello_world():
-    return request.args.get('key')
-
-
 if __name__ == '__main__':
-    main()
-    # app.run()
+    # main()
+    pass
+    courses_name, courses_details = get_all_courses_name_and_details()
+    for i in range(len(courses_name)):
+        print('\n'+courses_name[i]+'\n')
+        data = courses_details[i].replace(' ', '')
+        pattern = r'\.|。'
+        result = re.split(pattern, data)
+        [print(i) for i in result[:-1]]
