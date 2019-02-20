@@ -69,12 +69,6 @@ def convert_adv_course(courses_advance, course_name_to_index):
                         adv_course_dict[pre_course_index] = [course_name_to_index[course_adv_item]]
                     else:
                         adv_course_dict[pre_course_index].append(course_name_to_index[course_adv_item])
-            # # 此处考虑"计算机程序设计语言"这种情况
-            # if "计算机程序设计语言" in course_adv:
-            #     if pre_course_index not in adv_course_dict.keys():
-            #         adv_course_dict[pre_course_index] = [-1]
-            #     else:
-            #         adv_course_dict[pre_course_index].append(-1)
 
         pre_course_index += 1
     return adv_course_dict
