@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4552fdca-073f-45b6-bad8-eaa5348bde44" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Neo4j-Spark-Course/ModelProcess.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Neo4j-Spark-Course/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/helper.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewIdeas/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Neo4j-Spark-Course/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebPage/flaskLearning.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebPage/flaskLearning.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,14 +29,26 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Neo4j-Spark-Course/ModelProcess.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
+            <state relative-caret-position="133">
               <caret line="117" lean-forward="true" selection-start-line="117" selection-end-line="117" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="271">
+                <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -173,8 +177,8 @@
         <option value="$PROJECT_DIR$/Neo4j-Spark-Course/__init__.py" />
         <option value="$PROJECT_DIR$/Neo4j-Spark-Course/test.py" />
         <option value="$PROJECT_DIR$/Neo4j-Spark-Course/main.py" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/Neo4j-Spark-Course/ModelProcess.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -476,24 +480,33 @@
       <workItem from="1550315708759" duration="6099000" />
       <workItem from="1550577175289" duration="550000" />
       <workItem from="1550577810833" duration="10315000" />
-      <workItem from="1550826482111" duration="14262000" />
+      <workItem from="1550826482111" duration="14526000" />
     </task>
+    <task id="LOCAL-00001" summary="基本实现了问答系统的建立,还有一些问题需要进一步完善">
+      <created>1550846059047</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1550846059047</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="216279000" />
+    <option name="totallyTimeSpent" value="216543000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
       <window_info id="Designer" order="1" />
       <window_info id="UI Designer" order="2" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="5" weight="0.30651873" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.30604026" />
       <window_info id="Structure" order="6" side_tool="true" type="SLIDING" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" order="0" weight="0.3659218" />
+      <window_info anchor="bottom" id="Version Control" order="0" weight="0.36516854" />
       <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.49798927" weight="0.25630254" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5026846" side_tool="true" weight="0.44522473" />
       <window_info anchor="bottom" id="Database Changes" order="3" show_stripe_button="false" />
@@ -609,6 +622,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="基本实现了问答系统的建立,还有一些问题需要进一步完善" />
+    <option name="LAST_COMMIT_MESSAGE" value="基本实现了问答系统的建立,还有一些问题需要进一步完善" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Software_engineering_discipline_online_learning_platform_based_on_knowledge_map$neo4j.coverage" NAME="neo4j Coverage Results" MODIFIED="1550308801477" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider" />
@@ -866,23 +883,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="437">
-            <caret line="19" column="11" lean-forward="true" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Neo4j-Spark-Course/ModelProcess.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
+        <state relative-caret-position="133">
           <caret line="117" lean-forward="true" selection-start-line="117" selection-end-line="117" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="271">
+            <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
