@@ -12,11 +12,14 @@ from setting import *
 class ModelProcess:
 
     def __init__(self):
+        self.segment = HanLP.newSegment()
         # 问题模板，记录每个下标对应问题模板
-        self.questions_pattern = self.load_vocabulary()
+        self.questions_pattern = self.load_questions_pattern()
         # 词典，存储每个特征词对应的下标
         self.vocabulary = self.load_vocabulary()
+        # 模型,训练之后可直接用于预测
         self.nb_model = self.load_classifier_model()
+        # 将句子中的关键词虚拟化时存储代词与原词的对应关系
         self.abstract_map = {}
 
     def load_questions_pattern(self):
@@ -26,12 +29,32 @@ class ModelProcess:
         :return:
         """
         questions_pattern = {}
-        path = os.path.join(root_dir_path, 'question\\question_classification.txt')
-        for line in helper.read_file(path):
+        for line in helper.read_file(question_classification_dir_path):
             tokens = line.split(':')
             index, pattern = tokens[0], tokens[1]
             questions_pattern[int(index)] = pattern
         return questions_pattern
+
+    def save_vocabulary_to_file(self):
+        """
+        将详细问题的各个问题进行分词,将所有词都存入文件中
+        :return: None
+        """
+        train_list = []
+        index = 0
+        with open(vocabulary_dir_path, 'a', encoding='utf-8') as f:
+            for file in os.listdir(detailed_questions_dir_path):
+                file_path = os.path.join(detailed_questions_dir_path, file)
+                if os.path.isdir(file_path):
+                    continue
+                for line in helper.read_file(file_path):
+                    terms = self.segment.seg(line)
+                    for term in terms:
+                        if term.word in train_list:
+                            continue
+                        train_list.append(term.word)
+                        f.write(str(index) + ":" + term.word + '\n')
+                        index += 1
 
     def load_vocabulary(self):
         """
@@ -40,16 +63,22 @@ class ModelProcess:
         :return:
         """
         vocabulary = {}
-        path = os.path.join(root_dir_path, 'question\\vocabulary.txt')
-        for line in helper.read_file(path):
+        if os.path.getsize(vocabulary_dir_path) == 0:
+            self.save_vocabulary_to_file()
+        for line in helper.read_file(vocabulary_dir_path):
             tokens = line.split(':')
             index, word = tokens[0], tokens[1]
             vocabulary[word] = int(index)
         return vocabulary
 
     def sentence_to_array(self, line):
+        """
+        将句子分词成数组
+        :param line: 要被分割的句子
+        :return: 生成的数组
+        """
         vector = [0] * len(self.vocabulary)
-        terms = HanLP.segment(line)
+        terms = self.segment.seg(line)
         for term in terms:
             word = term.word
             if word in self.vocabulary:
@@ -69,10 +98,8 @@ class ModelProcess:
         生成训练集
         """
         train_list = []
-
-        path = os.path.join(root_dir_path, 'question\\detailed_questions')
-        for file in os.listdir(path):
-            file_path = os.path.join(path, file)
+        for file in os.listdir(detailed_questions_dir_path):
+            file_path = os.path.join(detailed_questions_dir_path, file)
             if os.path.isdir(file_path):
                 continue
             for line in helper.read_file(file_path):
@@ -80,7 +107,6 @@ class ModelProcess:
                 array = self.sentence_to_array(line)
                 train_one = LabeledPoint(float(index), Vectors.dense(array))
                 train_list.append(train_one)
-        print(train_list)
         trainingRDD = sc.parallelize(train_list)
         nb_model = NaiveBayes.train(trainingRDD)
         sc.stop()
@@ -104,7 +130,7 @@ class ModelProcess:
         """
         将抽象的句子与spark训练集中的模板进行匹配,得到句子对应的模板
         """
-        index, str_pattern = self.queryClassify(ab_str)
+        index, str_pattern = self.query_classify(ab_str)
         print("句子套用模板之后的结果:", str_pattern)
 
         """
@@ -123,17 +149,30 @@ class ModelProcess:
         :param question:
         :return: 句子中抽象化之后的结果
         """
-        terms = HanLP.segment(question)
+
+        terms = HanLP.newSegment().enableCustomDictionaryForcing(True).seg(question)
         abstract_query = ""
 
-        """
-        此处需要加对于不同词性的词做不同的处理
-        """
+        for term in terms:
+            word = term.word
+            term_str = str(term)
+            print(term_str)
+            if 'cn' in term_str:
+                abstract_query += "cn "
+                self.abstract_map['cn'] = word
+            else:
+                abstract_query += word + " "
 
         print("========HanLP分词结束========")
         return abstract_query
 
-    def queryClassify(self, ab_str):
+    def query_classify(self, ab_str):
+        """
+        将虚拟化之后的句子根据词典转化成向量,向量中保存词典中每个词在句子中是否出现.
+        将向量带入模型中进行预测,得到目标的问题模板
+        :param ab_str:虚拟化之后的句子
+        :return:问题模型的下标,问题模板
+        """
 
         # 将抽象化后的句子转化为数组
         test_array = self.sentence_to_array(ab_str)
@@ -150,12 +189,22 @@ class ModelProcess:
         return model_index, self.questions_pattern[model_index]
 
     def query_extension(self, str_pattern):
+        """
+        将问题模板与虚拟化的词典对应的词进行替换,将模板中的代词换成原始的名词
+        :param str_pattern:问题模板
+        :return:模板中代词替换回名词得到的结果
+        """
         for key in self.abstract_map:
             if key in str_pattern:
                 value = self.abstract_map[key]
-                str_pattern = str_pattern.replace(key,value)
+                str_pattern = str_pattern.replace(key, value)
         self.abstract_map.clear()
         return str_pattern
 
 
-ModelProcess()
+def main():
+    ModelProcess()
+
+
+if __name__ == '__main__':
+    main()

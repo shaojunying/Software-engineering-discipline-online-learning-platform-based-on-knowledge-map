@@ -1,5 +1,10 @@
-from pyhanlp import *
+from pyhanlp import HanLP
 
-CustomDictionary.add("星期机")
-result = HanLP.segment("今天星期机")
-print(result)
+terms = HanLP.segment("算法分析与设计")
+abstract_query = ""
+
+for term in terms:
+    print(term)
+    word = term.word
+    term_str = str(term)
+    print(word,term_str)

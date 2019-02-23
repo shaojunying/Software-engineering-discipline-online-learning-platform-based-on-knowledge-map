@@ -88,12 +88,13 @@ def main():
 
 
 if __name__ == '__main__':
-    # main()
-    pass
-    courses_name, courses_details = get_all_courses_name_and_details()
-    for i in range(len(courses_name)):
-        print('\n'+courses_name[i]+'\n')
-        data = courses_details[i].replace(' ', '')
-        pattern = r'\.|。'
-        result = re.split(pattern, data)
-        [print(i) for i in result[:-1]]
+    save_all_course_info()
+    # # main()
+    # courses_name, courses_details = get_all_courses_name_and_details()
+    # for i in range(len(courses_name)):
+    #     print(courses_name[i])
+        # print('\n'+courses_name[i]+'\n')
+        # data = courses_details[i].replace(' ', '')
+        # pattern = r'\.|。'
+        # result = re.split(pattern, data)
+        # [print(i) for i in result[:-1]]
