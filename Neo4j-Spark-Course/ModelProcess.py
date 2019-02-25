@@ -13,14 +13,16 @@ class ModelProcess:
 
     def __init__(self):
         self.segment = HanLP.newSegment()
+        # 将句子中的关键词虚拟化时存储代词与原词的对应关系
+        self.abstract_map = {}
+        # 存储停用词
+        self.stopwords = []
         # 问题模板，记录每个下标对应问题模板
         self.questions_pattern = self.load_questions_pattern()
         # 词典，存储每个特征词对应的下标
         self.vocabulary = self.load_vocabulary()
         # 模型,训练之后可直接用于预测
         self.nb_model = self.load_classifier_model()
-        # 将句子中的关键词虚拟化时存储代词与原词的对应关系
-        self.abstract_map = {}
 
     def load_questions_pattern(self):
         """
@@ -40,8 +42,8 @@ class ModelProcess:
         将详细问题的各个问题进行分词,将所有词都存入文件中
         :return: None
         """
+        self.load_stop_words()
         train_list = []
-        index = 0
         with open(vocabulary_dir_path, 'a', encoding='utf-8') as f:
             for file in os.listdir(detailed_questions_dir_path):
                 file_path = os.path.join(detailed_questions_dir_path, file)
@@ -50,11 +52,10 @@ class ModelProcess:
                 for line in helper.read_file(file_path):
                     terms = self.segment.seg(line)
                     for term in terms:
-                        if term.word in train_list:
+                        if term.word in train_list or term.word in self.stopwords:
                             continue
                         train_list.append(term.word)
-                        f.write(str(index) + ":" + term.word + '\n')
-                        index += 1
+                        f.write(term.word + '\n')
 
     def load_vocabulary(self):
         """
@@ -64,11 +65,13 @@ class ModelProcess:
         """
         vocabulary = {}
         if os.path.getsize(vocabulary_dir_path) == 0:
+
             self.save_vocabulary_to_file()
+        index = 0
+        print(os.path.getsize(vocabulary_dir_path))
         for line in helper.read_file(vocabulary_dir_path):
-            tokens = line.split(':')
-            index, word = tokens[0], tokens[1]
-            vocabulary[word] = int(index)
+            vocabulary[line] = index
+            index += 1
         return vocabulary
 
     def sentence_to_array(self, line):
@@ -104,7 +107,7 @@ class ModelProcess:
                 continue
             for line in helper.read_file(file_path):
                 index = file_path.split('】')[0].split('【')[1]
-                array = self.sentence_to_array(line)
+                array = self.sentence_to_array(line.strip())
                 train_one = LabeledPoint(float(index), Vectors.dense(array))
                 train_list.append(train_one)
         trainingRDD = sc.parallelize(train_list)
@@ -200,6 +203,10 @@ class ModelProcess:
                 str_pattern = str_pattern.replace(key, value)
         self.abstract_map.clear()
         return str_pattern
+
+    def load_stop_words(self):
+        for word in helper.read_file(stop_words_dir_path):
+            self.stopwords.append(word)
 
 
 def main():

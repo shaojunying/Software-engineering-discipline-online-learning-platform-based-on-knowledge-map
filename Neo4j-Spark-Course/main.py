@@ -49,11 +49,11 @@ def main():
                 for i in result.keys():
                     result_str += i+', '
                 return "" + pattern[0] + "的先修课程为" + result_str
-
-        result = ""
-        for i in pattern:
-            result += i + " "
-        return result
+        else:
+            result = ""
+            for i in pattern:
+                result += i + " "
+            return result
 
     app.run()
 
