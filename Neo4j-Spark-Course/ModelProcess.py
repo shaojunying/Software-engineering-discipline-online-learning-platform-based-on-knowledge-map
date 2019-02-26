@@ -5,6 +5,9 @@ from pyspark.mllib.classification import NaiveBayes
 from pyspark.mllib.linalg import Vectors
 from pyspark.mllib.regression import LabeledPoint
 
+import numpy
+from sklearn.naive_bayes import MultinomialNB
+
 from helper import *
 from setting import *
 
@@ -58,7 +61,7 @@ class ModelProcess:
                         f.write(term.word + '\n')
 
     def load_vocabulary(self):
-        """
+        """prin
         加载词汇表 == 关键特征 == 与HanLP分词后的单词进行匹配
         从文件中读取词汇表，存入字典中
         :return:

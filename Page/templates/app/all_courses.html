@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}总览{% endblock %}
+{% block is_all_active %}active{% endblock %}
+{% block content %}
+<p>这里是所有课程</p>
+<ul>
+{% for course in courses %}
+<li>{{course.name}}</li>
+<p>{{course.content|slice:":30"}}...</p>
+{% endfor %}
+</ul>
+
+{% endblock %}
+
+{% block lslide %}{% endblock %}
+
+{% block rslide %}{% endblock %}
+
+ {% block footer %}{% endblock %}

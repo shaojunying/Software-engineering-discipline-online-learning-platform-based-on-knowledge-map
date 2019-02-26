@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}登录{% endblock %}
+
+{% block content %}
+    <h1>登录</h1>
+    {% if form.errors %}
+        <p>
+        你的账号不匹配,请重新输入
+        </p>
+    {% else %}
+        <p>请输入您的账号密码</p>
+    {% endif %}
+
+    <div class="login-form">
+        <form action="{% url 'login' %}" method="post">
+            {% comment %} {{ form.as_p }} {% endcomment %}
+            {% for field in form %}
+            <div>
+                {{ field.errors }}
+                {{ field.label_tag }} {{ field }}
+            </div>
+            {% endfor %}
+            {% csrf_token %}
+            <input type="hidden" name="next" value="{{ next }}">
+            <p><input type="submit" value="登录"></p>
+        </form>
+        <p>没有账号?点此<a href="{% url 'register' %}">注册</a></p>
+    </div>
+
+{% endblock %}

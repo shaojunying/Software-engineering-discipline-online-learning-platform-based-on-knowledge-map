@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}
+注销
+{% endblock %}
+
+{% block content %}
+<h1>注销成功</h1>
+    <p>你已经注销,点此重新登录<a href="{% url 'login' %}">log-in again</a>.</p>
+    点此<a style="color: #ffffff !important;" href="{% url 'home' %}">返回主页</a>
+{% endblock %}

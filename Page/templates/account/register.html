@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+注册
+{% endblock %}
+
+{% block content %}
+<h1>创建账号</h1>
+    <p>请输入以下字段</p>
+    <form action="." method="post" novalidate>
+    {% comment %} {{ user_form.as_p }} {% endcomment %}
+    {% for field in user_form %}
+            <div>
+                {{ field.errors }}
+                {{ field.label_tag }} {{ field }}
+            </div>
+    {% endfor %}
+    {% csrf_token %}
+    <p><input type="submit" value="注册"></p>
+    </form>
+{% endblock %}
+
+{% block lslide %}{% endblock %}
+
+{% block rslide %}{% endblock %}
+
+{% block footer %}{% endblock %}

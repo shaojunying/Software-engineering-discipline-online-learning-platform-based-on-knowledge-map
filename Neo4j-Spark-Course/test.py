@@ -1,10 +1,6 @@
-from pyhanlp import HanLP
-
-terms = HanLP.segment("算法分析与设计")
-abstract_query = ""
-
-for term in terms:
-    print(term)
-    word = term.word
-    term_str = str(term)
-    print(word,term_str)
+import numpy
+from sklearn.naive_bayes import MultinomialNB
+clf = MultinomialNB()
+clf.partial_fit(numpy.array([1,1]), numpy.array(['aa']), ['aa','bb'])
+clf.partial_fit(numpy.array([6,1]), numpy.array(['bb']))
+clf.predict(numpy.array([9,1]))

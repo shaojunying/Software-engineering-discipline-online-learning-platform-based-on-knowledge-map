@@ -1,0 +1,19 @@
+.nav-link {
+    font-size: 18px;
+  }
+.active {
+  font-size: 30px !important;
+}
+p {
+  font-size: 30px;
+}
+body{
+    background-color: #272b30 !important;
+}
+body{
+    color: #eeeeee !important;
+}
+
+a{
+    color: #000 !important;
+}

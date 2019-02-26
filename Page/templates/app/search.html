@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}搜索{% endblock %}
+{% block is_search_active %}active{% endblock %}
+{% block content %}搜索
+<form action="." method="post">
+{% comment %} {{ question_form.as_p }} {% endcomment %}
+{% for field in question_form %}
+    <div>
+        {{ field.errors }}
+        {% comment %} 上面是内置的错误验证 {% endcomment %}
+        {% comment %} {{ field.label_tag }}  标签名是英文,省略不写{% endcomment %}
+        {{ field }}
+        {% comment %} 上面表单的输入框 {% endcomment %}
+    </div>
+{% endfor %}
+{% csrf_token %}
+<input type="submit" value="搜索">
+</form>
+<p>结果如下:{{ result }}</p>
+{% endblock %}
+
+{% block lslide %}{% endblock %}
+
+{% block rslide %}{% endblock %}
+
+ {% block footer %}{% endblock %}
