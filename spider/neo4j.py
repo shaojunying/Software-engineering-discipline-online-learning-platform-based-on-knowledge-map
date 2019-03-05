@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from py2neo import *
 from xml.dom import minidom as minidom
+from setting import *
 
 
 def get_xml_text_node_value(node, name):
@@ -49,7 +50,7 @@ def save_all_course_info():
     # 获得所有课程节点的父节点
     courses_nodes = root.getElementsByTagName('courses')
     courses = []
-    graph = Graph("http://localhost:11005", password="shao1999")
+    graph = Graph(neo4j_url, password=neo4j_password)
     graph.delete_all()
     # 获取所有课程节点
     for course_node in get_all_sub_element_node(courses_nodes[0]):

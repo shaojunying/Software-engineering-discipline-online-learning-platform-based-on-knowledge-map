@@ -15,3 +15,5 @@ question_classification_dir_path = os.path.join(question_dir_path, 'question_cla
 vocabulary_dir_path = os.path.join(question_dir_path, 'vocabulary.txt')
 detailed_questions_dir_path = os.path.join(question_dir_path, 'detailed_questions')
 stop_words_dir_path = os.path.join(root_dir_path, 'stopwords.txt')
+
+data_xml_dir_path = 'spider/data.xml'

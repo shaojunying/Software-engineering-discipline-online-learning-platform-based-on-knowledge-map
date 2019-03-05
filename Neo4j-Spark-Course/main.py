@@ -25,8 +25,13 @@ def main():
 
     app = Flask(__name__)
 
+    @app.route('/')
+    def index():
+        return "index"
+
     @app.route('/query/<question>')
     def query(question):
+        print(question)
         """分词问题question,返回模型的下标,以及对应的问题模板"""
         index, pattern = query_process.analysis_query(question)
         if index == 0:

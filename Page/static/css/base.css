@@ -17,3 +17,7 @@ body{
 a{
     color: #000 !important;
 }
+
+input[type=text]{
+    width: 400px !important;
+}
