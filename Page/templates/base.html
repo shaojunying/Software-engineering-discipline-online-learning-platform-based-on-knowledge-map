@@ -1,80 +1,78 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>{% block title %}{% endblock %}</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
-    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
   <!-- 其他css文件放在后面 -->
   <link rel="stylesheet" href="{% static "css/base.css" %}">
-    {% block css %}{% endblock %}
+  {% block css %}{% endblock %}
 </head>
 
 <body>
-  <div class="conatiner header">
-    <div class="navbar navbar-expand-lg navbar-light bg-light">
-        {% comment %} <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static "icons/ic_home_18pt_2x.png" %}" alt="首页"></a>
-        <a href="{% url 'home' %}"><h4>基于知识图谱的软件工程学习平台</h4></a>
-         {% endcomment %}
-        
+
+  <div class="ui container">
+    <div class="ui borderless main menu">
+      <!-- main应该是固定的意思 -->
+      <a class="header item" href="{% url 'home' %}">
+          <div class="ui animated fade inverted blue button">
+            <div class="visible content"><i class="home large icon"></i></div>
+            <div class="ui hidden content">
+              <div class="ui medium header">主页</div>
+            </div>
+          </div>
+      </a>
+      <a class="item {% block is_start_active %}{% endblock %}" href="{% url 'start' %}">
+        <button class="ui inverted blue button">开始</button>
+      </a>
+      <a class="item {% block is_graph_active %}{% endblock %}" href="{% url 'graph' %}">
+          <button class="ui inverted blue button">图谱</button>
+      </a>
+      <a class="item {% block is_search_active %}{% endblock %}" href="{% url 'search' %}">
+          <button class="ui inverted blue button">搜索</button>
+      </a>
+
+      <div class="right menu">
         {% if request.user.is_authenticated %}
-        <a class="navbar-brand" href="{% url 'index' %}"><img src="{% static "icons/ic_home_18pt_2x.png" %}" alt="首页"></a>
-        <a href="{% url 'index' %}"><h4>基于知识图谱的软件工程学习平台</h4></a>
-            <div class="collapse navbar-collapse  " id="navbarSupportedContent">
-                <ul class="navbar-nav ml-5">
-                  <li class="nav-item {% block is_start_active %}{% endblock %}">
-                    <a class="nav-link" href="{% url 'start' %}">开始</a>
-                  </li>
-                  <li class="nav-item mx-2 {% block is_graph_active %}{% endblock %}">
-                    <a class="nav-link" href="{% url 'graph' %}">图谱</a>
-                  </li>
-                  <li class="nav-item mx-2 {% block is_all_active %}{% endblock %}">
-                    <a class="nav-link" href="{% url 'all_courses' %}">总览</a>
-                  </li>
-                  <li class="nav-item mx-2 {% block is_other_active %}{% endblock %}">
-                    <a class="nav-link" href="{% url 'others' %}">其他</a>
-                  </li>
-                  <li class="nav-item mx-2 {% block is_search_active %}{% endblock %}">
-                    <a class="nav-link" href="{% url 'search' %}">搜索</a>
-                  </li>
-                </ul>
-                
-                <p class="my-auto ml-auto"><a class=""  href="{% url 'logout' %}"><img src="{% static "icons/ic_person_18pt_2x.png" %}" alt="注销" >{{ request.user.username }}</a>
-                <a href="{% url 'logout' %}">注销</a></p>
-                {% else %}
-                <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static "icons/ic_home_18pt_2x.png" %}" alt="首页"></a>
-                <a href="{% url 'home' %}"><h4>基于知识图谱的软件工程学习平台</h4></a>
-                <a class="ml-auto mr-3"  href="{% url 'login' %}"><img src="{% static "icons/ic_person_18pt_2x.png" %}" ></a>
-                <a href="{% url 'login' %}">登录/注册</a>
+        <a class="item" href="{% url 'logout' %}">
+          <div class="ui animated fade inverted blue button">
+            <div class="visible content"><i class="user large icon"></i></div>
+            <div class="ui hidden content">
+              <div class="ui medium header">注销</div>
+            </div>
+          </div>
+        </a>
+        {% else %}
+        <a href="{% url 'login' %}" class="item">
+            <div class="ui animated fade inverted blue button">
+                <div class="visible content" style="width: 60px"><i class="user icon"></i></div>
+                <div class="ui hidden content">
+                  <div class="ui medium header">登录/注册</div>
+                </div>
               </div>
+        </a>
         {% endif %}
+      </div>
     </div>
   </div>
 
-  <div class="container content">
+    {% block content %}{% endblock %}
 
-    <span class="user">
-      {% block content %}{% endblock %}
-    </span>
-  </div>
-  <div class="container lslide">
-      {% block lslide %}{% endblock %}
+  <div class="container">
+    {% block lslide %}{% endblock %}
   </div>
   <div class="container rslide">
-      {% block rslide %}{% endblock %}
+    {% block rslide %}{% endblock %}
   </div>
   <div class="container footer">
-      {% block footer %}{% endblock %}
+    {% block footer %}{% endblock %}
   </div>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
   {% block js %}{% endblock %}
 </body>
 

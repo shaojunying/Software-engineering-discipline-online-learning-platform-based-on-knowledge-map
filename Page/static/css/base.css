@@ -1,23 +1,12 @@
-.nav-link {
-    font-size: 18px;
-  }
-.active {
-  font-size: 30px !important;
-}
-p {
-  font-size: 30px;
-}
-body{
-    background-color: #272b30 !important;
-}
-body{
-    color: #eeeeee !important;
+body>.grid {
+    height: 100%;
 }
 
-a{
-    color: #000 !important;
+.column {
+    max-width: 450px;
 }
 
-input[type=text]{
-    width: 400px !important;
+.errorlist {
+    list-style: none;
+    color: red;
 }

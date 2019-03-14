@@ -16,16 +16,7 @@
 
 
 {% block css %}
-
 <style>
-    body {
-        background-color: #272b30;
-        padding: 0;
-        text-align: center;
-        font-family: OpenSans-Light, PingFang SC, Hiragino Sans GB, Microsoft Yahei, Microsoft Jhenghei, sans-serif;
-    }
-
-
     #info p{
         font-size: 12px;
     }
@@ -37,7 +28,7 @@
     }
 
     .links line {
-        stroke: rgb(240,240,240);
+        stroke:black;
         /*stroke-opacity: 0.3;*/
     }
 
@@ -59,7 +50,7 @@
         position: absolute;
         top: 50px;
         left: 60px;
-        color: #ffffff;
+        color: black;
     }
 
 
@@ -78,7 +69,7 @@
     .texts text {
         /*display: none;*/
         font-size: 13px;
-        color: #ffffff;
+        color:black;
     }
     .texts text:hover {
         cursor: pointer;
@@ -90,7 +81,7 @@
         right: 30px;
         /*text-align: right;*/
         width: 270px;
-        color: #ffffff;
+        color:black;
     }
 
 </style>
@@ -361,8 +352,6 @@
         }
     });
     })
-
-
 </script>
 
 {% endblock %}
