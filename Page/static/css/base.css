@@ -1,23 +1,15 @@
-.nav-link {
-    font-size: 18px;
-  }
-.active {
-  font-size: 30px !important;
-}
-p {
-  font-size: 30px;
-}
-body{
-    background-color: #272b30 !important;
-}
-body{
-    color: #eeeeee !important;
-}
 
-a{
-    color: #000 !important;
+body > .grid {
+  height: 80%;
 }
-
-input[type=text]{
-    width: 400px !important;
+.column {
+  max-width: 450px;
+}
+/* 上面设置表单的居中和宽度,下面是问题输入框的宽度和错误列表的样式 */
+.errorlist {
+    list-style: none;
+    color: red;
+}
+#id_question {
+    width: 600px;
 }
