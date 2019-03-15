@@ -1,12 +1,15 @@
-body>.grid {
-    height: 100%;
-}
 
+body > .grid {
+  height: 80%;
+}
 .column {
-    max-width: 450px;
+  max-width: 450px;
 }
-
+/* 上面设置表单的居中和宽度,下面是问题输入框的宽度和错误列表的样式 */
 .errorlist {
     list-style: none;
     color: red;
+}
+#id_question {
+    width: 600px;
 }

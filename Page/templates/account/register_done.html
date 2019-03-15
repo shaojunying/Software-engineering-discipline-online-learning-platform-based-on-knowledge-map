@@ -5,8 +5,16 @@
 {% endblock %}
 
 {% block content %}
-    <h1>欢迎您{{ new_user.username }}!</h1>
-    <p>你现在已经成功注册了账号,点此<a href="{% url 'login' %}">登录</a>.</p>
+    <div class="ui middle aligned center aligned grid">
+        <div class="column">
+            <h2 class="ui teal image header">
+                <i class="user icon"></i>
+                <div class="content">
+                    欢迎您,{{ new_user.username }}!你现在已经成功注册了账号,点此<a href="{% url 'login' %}">登录</a>
+                </div>
+            </h2>
+        </div>
+    </div>
 {% endblock %}
 
 {% block lslide %}{% endblock %}

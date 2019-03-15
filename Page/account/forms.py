@@ -7,10 +7,10 @@ class UserRegistrationForm(forms.ModelForm):
 
     class Meta:
         model = User
-        fields = ('username','email')
+        fields = ('username',)
 
     def clean_password2(self):
         cd = self.cleaned_data
         if cd['password'] != cd['password2']:
-            raise forms.ValidationError(r"Password don't match.")
+            raise forms.ValidationError("两次输入的密码不一致")
         return cd['password2']

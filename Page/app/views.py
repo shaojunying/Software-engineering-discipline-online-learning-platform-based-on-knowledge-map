@@ -39,7 +39,3 @@ def search(request):
     return render(request, 'app/search.html', {"question_form": question_form, "result": result})
 
 
-@login_required
-def all_courses(request):
-    courses = Course.objects.all()
-    return render(request, 'app/all_courses.html', {'courses': courses})

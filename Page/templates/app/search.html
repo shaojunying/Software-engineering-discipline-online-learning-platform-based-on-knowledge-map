@@ -2,26 +2,40 @@
 
 {% block title %}搜索{% endblock %}
 {% block is_search_active %}active{% endblock %}
-{% block content %}搜索
-<form action="." method="post">
-{% comment %} {{ question_form.as_p }} {% endcomment %}
-{% for field in question_form %}
-    <div>
-        {{ field.errors }}
-        {% comment %} 上面是内置的错误验证 {% endcomment %}
-        {% comment %} {{ field.label_tag }}  标签名是英文,省略不写{% endcomment %}
-        {{ field }}
-        {% comment %} 上面表单的输入框 {% endcomment %}
+{% block content %}
+<div class="ui hidden divider"></div>
+<div class="ui container">
+    <div class="ui stacked segments">
+        <div class="ui center aligned segment">
+            <form action="" method="post" class="ui form" id="question_form">
+                {% for field in question_form %}
+                    <div class="ui action left icon input" style="width:600px;">
+                        <i class="search icon"></i>
+                        {{ field }}
+                    </div>
+                {% endfor %}
+                {% csrf_token %}
+                <input type="submit" class="ui large button" value="搜索">
+            </form>
+        </div>
+        <div class="ui center aligned segment">
+            {% ifequal result '' %}
+            <p class="ui header">请输入问题,比如</p>
+            <div class="ui relaxed list">
+                <div class="item">c++程序设计的先修课是什么</div>
+                <div class="item">c语言是谁教的</div>
+                <div class="item">指针的用法</div>
+            </div>
+            {% else %}
+            <div class="ui center aligned  segment">{{ result }}</div>
+            {% endifequal %}
+        </div>
     </div>
-{% endfor %}
-{% csrf_token %}
-<input type="submit" value="搜索">
-</form>
-<p>结果如下:{{ result }}</p>
+</div>
 {% endblock %}
 
 {% block lslide %}{% endblock %}
 
 {% block rslide %}{% endblock %}
 
- {% block footer %}{% endblock %}
+{% block footer %}{% endblock %}
