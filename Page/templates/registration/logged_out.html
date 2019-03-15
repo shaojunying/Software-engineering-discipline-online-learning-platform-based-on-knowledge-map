@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+注销成功
+{% endblock %}
+
+{% block content %}
+<div class="ui middle aligned center aligned grid">
+    <div class="column">
+        <h2 class="ui teal image header">
+            <i class="user icon"></i>
+            <div class="content">
+                注销成功,点此重新<a href="{% url 'login' %}">登录</a>
+            </div>
+        </h2>
+    </div>
+</div>
+
+{% endblock %}

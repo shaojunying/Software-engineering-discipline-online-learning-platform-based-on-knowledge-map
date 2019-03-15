@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello from Flask</title>
+</head>
+<body>
+{% if data|length == 0 %}
+    <h1>没有先修课程</h1>
+{% else %}
+    <h1>先修课程为:</h1>
+    {% for item in data %}
+        <h3>{{ item['c']['name'] }}</h3>
+        {{ item['c']['details'] }}
+    {% endfor %}
+{% endif %}
+</body>
+</html>

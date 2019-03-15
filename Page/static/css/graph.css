@@ -1,0 +1,72 @@
+#info p{
+    font-size: 12px;
+}
+
+/*节点中的圆*/
+.nodes circle {
+    fill: rgba(108,164,108);
+    stroke: rgba(255,255,255);
+    stroke-width: 1.5px;
+}
+
+/*连线的线*/
+.links line {
+    stroke:black;
+    /*stroke-opacity: 0.3;*/
+}
+
+/*没有被选中的圆*/
+.nodes circle.inactive{
+    fill: rgba(108,164,108,.3);
+    stroke: rgba(255,255,255,.3);
+}
+
+/*鼠标没有放上去时的文本的线*/
+.texts text.inactive
+{
+    display: none;
+}
+
+.links line.inactive{
+    display: none;
+}
+
+
+#title{
+    position: absolute;
+    top: 50px;
+    left: 60px;
+    color: black;
+}
+
+
+#search1 input {
+    position: absolute;
+    top: 220px;
+    left: 60px;
+    color: #fff;
+    border: none;
+    /*outline: none;*/
+    /*box-shadow: none;*/
+    width: 200px;
+    background-color: #666;
+}
+
+.texts text {
+    /*display: none;*/
+    font-size: 13px;
+    color:black;
+}
+.texts text:hover {
+    cursor: pointer;
+}
+
+/*右下角显示课程详细信息的区域*/
+#info{
+    position: absolute;
+    bottom: 40px;
+    right: 30px;
+    /*text-align: right;*/
+    width: 270px;
+    color:black;
+}
