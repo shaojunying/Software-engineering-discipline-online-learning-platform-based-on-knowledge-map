@@ -1,7 +1,6 @@
 # Neo4j配置
 import os
 
-neo4j_username = "neo4j"
 neo4j_password = "shao1999"
 neo4j_url = "http://localhost:11005"
 

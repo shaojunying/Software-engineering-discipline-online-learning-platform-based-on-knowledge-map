@@ -4,8 +4,9 @@
     <list default="true" id="4552fdca-073f-45b6-bad8-eaa5348bde44" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Neo4j-Spark-Course/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Neo4j-Spark-Course/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Neo4j-Spark-Course/neo4j.py" beforeDir="false" afterPath="$PROJECT_DIR$/Neo4j-Spark-Course/neo4j.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Neo4j-Spark-Course/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Neo4j-Spark-Course/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Page/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/Page/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Page/static/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/Page/static/css/base.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/setting.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spider/data.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spider/data.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spider/neo4j.py" beforeDir="false" afterPath="$PROJECT_DIR$/spider/neo4j.py" afterDir="false" />
@@ -48,19 +49,66 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spider/data.xml">
+        <entry file="file://$PROJECT_DIR$/Neo4j-Spark-Course/neo4j.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+            <state relative-caret-position="946">
+              <caret line="45" selection-start-line="45" selection-end-line="45" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spider/data.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="35" selection-start-column="35" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Neo4j-Spark-Course/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1408">
+              <caret line="67" selection-start-line="67" selection-end-line="67" />
+              <folding>
+                <element signature="e#42#65#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/setting.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="173">
+              <caret line="8" column="26" lean-forward="true" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spider/spider.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2508">
+              <caret line="117" column="18" selection-start-line="117" selection-start-column="18" selection-end-line="117" selection-end-column="18" />
+              <folding>
+                <element signature="e#13#22#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spider/result.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spider/neo4j.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+            <state relative-caret-position="660">
+              <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
               <folding>
                 <element signature="e#24#44#0" expanded="true" />
               </folding>
@@ -68,23 +116,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="399">
-                <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-              </first_editor>
-              <second_editor />
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/custom_data/question/question_classification.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/setting.py">
+        <entry file="file://$PROJECT_DIR$/data/custom_data/question/detailed_questions/【0】课程介绍.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+            <state relative-caret-position="198">
+              <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Neo4j-Spark-Course/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -105,12 +159,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>questions_pattern</find>
-      <find>abstract_map</find>
-      <find />
-      <find>hanl</find>
-      <find>hanlp</find>
-      <find>segment</find>
       <find>开始</find>
       <find>sel</find>
       <find>.、</find>
@@ -125,7 +173,6 @@
       <find>__in</find>
       <find>什么</find>
       <find>编号</find>
-      <find>prin</find>
       <find>h4</find>
       <find>padding</find>
       <find>课程名称</find>
@@ -135,6 +182,13 @@
       <find>find_all_course_can_study</find>
       <find>adv</find>
       <find>save_course_name_and_detail_to_xml</find>
+      <find>xml</find>
+      <find>吴国仕</find>
+      <find>程保中</find>
+      <find>courses</find>
+      <find>id</find>
+      <find>prin</find>
+      <find>neo4j_username</find>
     </findStrings>
     <replaceStrings>
       <replace>adv</replace>
@@ -160,9 +214,7 @@
         <option value="$PROJECT_DIR$/data/data/question/detailed_questions/【0】课程介绍.txt" />
         <option value="$PROJECT_DIR$/data/data/question/detailed_questions/【1】先修课程.txt" />
         <option value="$PROJECT_DIR$/Neo4j-Spark-Course/__init__.py" />
-        <option value="$PROJECT_DIR$/Neo4j-Spark-Course/neo4j.py" />
         <option value="$PROJECT_DIR$/data/custom_data/dictionary/course_dict.txt" />
-        <option value="$PROJECT_DIR$/spider/data.xml" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/data/custom_data/question/detailed_questions/【3】必修选修.txt" />
         <option value="$PROJECT_DIR$/data/stopwords.txt" />
@@ -176,7 +228,6 @@
         <option value="$PROJECT_DIR$/data/custom_data/question/detailed_questions/【11】教学内容.txt" />
         <option value="$PROJECT_DIR$/data/custom_data/question/detailed_questions/【9】授课老师姓名.txt" />
         <option value="$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/scipy/optimize/tnc.py" />
-        <option value="$PROJECT_DIR$/Neo4j-Spark-Course/test.py" />
         <option value="$PROJECT_DIR$/Page/testpy2neo/testneo4j.py" />
         <option value="$PROJECT_DIR$/Page/app/forms.py" />
         <option value="$PROJECT_DIR$/Page/app/urls.py" />
@@ -193,12 +244,15 @@
         <option value="$PROJECT_DIR$/Page/templates/app/graph.html" />
         <option value="$PROJECT_DIR$/Page/templates/base.html" />
         <option value="$PROJECT_DIR$/Page/templates/registration/logged_out.html" />
-        <option value="$PROJECT_DIR$/Neo4j-Spark-Course/main.py" />
         <option value="$PROJECT_DIR$/Page/templates/app/search.html" />
         <option value="$PROJECT_DIR$/Page/static/css/base.css" />
-        <option value="$PROJECT_DIR$/setting.py" />
         <option value="$PROJECT_DIR$/spider/spider.py" />
+        <option value="$PROJECT_DIR$/Neo4j-Spark-Course/main.py" />
+        <option value="$PROJECT_DIR$/Neo4j-Spark-Course/neo4j.py" />
         <option value="$PROJECT_DIR$/spider/neo4j.py" />
+        <option value="$PROJECT_DIR$/spider/data.xml" />
+        <option value="$PROJECT_DIR$/Neo4j-Spark-Course/test.py" />
+        <option value="$PROJECT_DIR$/setting.py" />
       </list>
     </option>
   </component>
@@ -212,8 +266,9 @@
     <servers />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="951" />
-    <option name="width" value="978" />
+    <option name="x" value="-15" />
+    <option name="y" value="-30" />
+    <option name="width" value="980" />
     <option name="height" value="1050" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -238,7 +293,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -250,12 +304,13 @@
             <path>
               <item name="Software-engineering-discipline-online-learning-platform-based-on-knowledge-map" type="b2602c69:ProjectViewProjectNode" />
               <item name="Software-engineering-discipline-online-learning-platform-based-on-knowledge-map" type="462c0819:PsiDirectoryNode" />
-              <item name="spider" type="462c0819:PsiDirectoryNode" />
+              <item name="Neo4j-Spark-Course" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -306,7 +361,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.spider">
+  <component name="RunManager" selected="Python.main (1)">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="Software-engineering-discipline-online-learning-platform-based-on-knowledge-map" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -351,28 +406,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="neo4j (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Software-engineering-discipline-online-learning-platform-based-on-knowledge-map" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\shao\AppData\Local\Programs\Python\Python37\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Neo4j-Spark-Course" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Neo4j-Spark-Course/neo4j.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="neo4j" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Software-engineering-discipline-online-learning-platform-based-on-knowledge-map" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -387,6 +420,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/spider/neo4j.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="setting" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Software-engineering-discipline-online-learning-platform-based-on-knowledge-map" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\shao\AppData\Local\Programs\Python\Python37\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/setting.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -440,19 +495,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.neo4j" />
-      <item itemvalue="Python.test (1)" />
       <item itemvalue="Python.main (1)" />
-      <item itemvalue="Python.neo4j (1)" />
+      <item itemvalue="Python.neo4j" />
+      <item itemvalue="Python.setting" />
       <item itemvalue="Python.spider" />
+      <item itemvalue="Python.test (1)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.spider" />
         <item itemvalue="Python.main (1)" />
         <item itemvalue="Python.test (1)" />
+        <item itemvalue="Python.setting" />
         <item itemvalue="Python.neo4j" />
-        <item itemvalue="Python.neo4j (1)" />
+        <item itemvalue="Python.spider" />
       </list>
     </recent_temporary>
   </component>
@@ -509,7 +564,13 @@
       <workItem from="1551243998703" duration="2061000" />
       <workItem from="1551248508437" duration="2164000" />
       <workItem from="1551762452671" duration="10771000" />
-      <workItem from="1551796635005" duration="1555000" />
+      <workItem from="1551796635005" duration="14463000" />
+      <workItem from="1552223093636" duration="234000" />
+      <workItem from="1552223658458" duration="4810000" />
+      <workItem from="1552292349777" duration="5218000" />
+      <workItem from="1552356863702" duration="1878000" />
+      <workItem from="1552450720579" duration="465000" />
+      <workItem from="1552557010993" duration="10000" />
     </task>
     <task id="LOCAL-00001" summary="基本实现了问答系统的建立,还有一些问题需要进一步完善">
       <created>1550846059047</created>
@@ -518,29 +579,37 @@
       <option name="project" value="LOCAL" />
       <updated>1550846059047</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="对spider进行了整理">
+      <created>1551798221203</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1551798221203</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="303573000" />
+    <option name="totallyTimeSpent" value="329112000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
       <window_info id="Designer" order="1" />
       <window_info id="UI Designer" order="2" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Favorites" order="4" sideWeight="0.5014045" side_tool="true" weight="0.15771812" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.6332623" visible="true" weight="0.13672923" />
+      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.6332623" visible="true" weight="0.18230563" />
       <window_info id="Structure" order="6" sideWeight="0.36808512" side_tool="true" weight="0.19664429" />
-      <window_info anchor="bottom" id="Version Control" order="0" weight="0.36516854" />
-      <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.49798927" weight="0.66432583" />
+      <window_info anchor="bottom" id="Version Control" order="0" weight="0.36416185" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" sideWeight="0.49798927" visible="true" weight="0.22905028" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50402147" side_tool="true" weight="0.34248555" />
       <window_info anchor="bottom" id="Database Changes" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="4" />
-      <window_info anchor="bottom" id="Find" order="5" weight="0.3286517" />
-      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.49597856" weight="0.30924857" />
+      <window_info anchor="bottom" id="Find" order="5" weight="0.32803467" />
+      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.49597856" weight="0.26589596" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.39739883" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -654,62 +723,30 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="基本实现了问答系统的建立,还有一些问题需要进一步完善" />
-    <option name="LAST_COMMIT_MESSAGE" value="基本实现了问答系统的建立,还有一些问题需要进一步完善" />
+    <MESSAGE value="对spider进行了整理" />
+    <option name="LAST_COMMIT_MESSAGE" value="对spider进行了整理" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Software_engineering_discipline_online_learning_platform_based_on_knowledge_map$test1.coverage" NAME="test1 Coverage Results" MODIFIED="1550065999766" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider" />
-    <SUITE FILE_PATH="coverage/Software_engineering_discipline_online_learning_platform_based_on_knowledge_map$flaskLearning__1_.coverage" NAME="flaskLearning (1) Coverage Results" MODIFIED="1550665282343" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/WebPage" />
-    <SUITE FILE_PATH="coverage/Software_engineering_discipline_online_learning_platform_based_on_knowledge_map$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1551099065459" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Neo4j-Spark-Course" />
-    <SUITE FILE_PATH="coverage/Software_engineering_discipline_online_learning_platform_based_on_knowledge_map$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1551244305446" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Neo4j-Spark-Course" />
-    <SUITE FILE_PATH="coverage/Software_engineering_discipline_online_learning_platform_based_on_knowledge_map$main.coverage" NAME="main Coverage Results" MODIFIED="1550840494751" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Neo4j-Spark-Course" />
-    <SUITE FILE_PATH="coverage/Software_engineering_discipline_online_learning_platform_based_on_knowledge_map$spider.coverage" NAME="spider Coverage Results" MODIFIED="1551797681255" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider" />
-    <SUITE FILE_PATH="coverage/Software_engineering_discipline_online_learning_platform_based_on_knowledge_map$flask.coverage" NAME="flask Coverage Results" MODIFIED="1549959622145" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider" />
     <SUITE FILE_PATH="coverage/Software_engineering_discipline_online_learning_platform_based_on_knowledge_map$neo4j__1_.coverage" NAME="neo4j (1) Coverage Results" MODIFIED="1550904342406" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Neo4j-Spark-Course" />
-    <SUITE FILE_PATH="coverage/Software_engineering_discipline_online_learning_platform_based_on_knowledge_map$test.coverage" NAME="test Coverage Results" MODIFIED="1550582528961" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider" />
     <SUITE FILE_PATH="coverage/Software_engineering_discipline_online_learning_platform_based_on_knowledge_map$flaskLearning.coverage" NAME="flaskLearning Coverage Results" MODIFIED="1549985781005" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider" />
-    <SUITE FILE_PATH="coverage/Software_engineering_discipline_online_learning_platform_based_on_knowledge_map$neo4j.coverage" NAME="neo4j Coverage Results" MODIFIED="1550912429121" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider" />
+    <SUITE FILE_PATH="coverage/Software_engineering_discipline_online_learning_platform_based_on_knowledge_map$test1.coverage" NAME="test1 Coverage Results" MODIFIED="1550065999766" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider" />
+    <SUITE FILE_PATH="coverage/Software_engineering_discipline_online_learning_platform_based_on_knowledge_map$setting.coverage" NAME="setting Coverage Results" MODIFIED="1552300089553" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Software_engineering_discipline_online_learning_platform_based_on_knowledge_map$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1552450737745" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Neo4j-Spark-Course" />
     <SUITE FILE_PATH="coverage/Software_engineering_discipline_online_learning_platform_based_on_knowledge_map$ModelProcess.coverage" NAME="ModelProcess Coverage Results" MODIFIED="1550897611423" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Neo4j-Spark-Course" />
+    <SUITE FILE_PATH="coverage/Software_engineering_discipline_online_learning_platform_based_on_knowledge_map$main.coverage" NAME="main Coverage Results" MODIFIED="1550840494751" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Neo4j-Spark-Course" />
+    <SUITE FILE_PATH="coverage/Software_engineering_discipline_online_learning_platform_based_on_knowledge_map$spider.coverage" NAME="spider Coverage Results" MODIFIED="1551859423228" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider" />
+    <SUITE FILE_PATH="coverage/Software_engineering_discipline_online_learning_platform_based_on_knowledge_map$flask.coverage" NAME="flask Coverage Results" MODIFIED="1549959622145" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider" />
+    <SUITE FILE_PATH="coverage/Software_engineering_discipline_online_learning_platform_based_on_knowledge_map$neo4j.coverage" NAME="neo4j Coverage Results" MODIFIED="1552300046521" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider" />
+    <SUITE FILE_PATH="coverage/Software_engineering_discipline_online_learning_platform_based_on_knowledge_map$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1552357245263" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Neo4j-Spark-Course" />
+    <SUITE FILE_PATH="coverage/Software_engineering_discipline_online_learning_platform_based_on_knowledge_map$test.coverage" NAME="test Coverage Results" MODIFIED="1550582528961" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider" />
+    <SUITE FILE_PATH="coverage/Software_engineering_discipline_online_learning_platform_based_on_knowledge_map$flaskLearning__1_.coverage" NAME="flaskLearning (1) Coverage Results" MODIFIED="1550665282343" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/WebPage" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/django/shortcuts.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/custom_data/question/detailed_questions/【6】课程编号.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="10" lean-forward="true" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-896218777/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-232">
-          <caret line="232" column="24" lean-forward="true" selection-start-line="232" selection-start-column="24" selection-end-line="232" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/django/core/management/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="185" column="74" lean-forward="true" selection-start-line="185" selection-start-column="74" selection-end-line="185" selection-end-column="74" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Page/SoftwareEngineeringLearningPlatform/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Page/app/ModelProcess.py" />
     <entry file="file://$PROJECT_DIR$/Page/app/neo4j.py" />
-    <entry file="file://$PROJECT_DIR$/data/custom_data/question/detailed_questions/【4】学分.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/custom_data/question/detailed_questions/【3】必修选修.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
@@ -775,9 +812,6 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Page/app/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Page/app/tests.py">
       <provider selected="true" editor-type-id="text-editor" />
@@ -871,22 +905,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/custom_data/question/detailed_questions/【0】课程介绍.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/stopwords.txt">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/custom_data/question/question_classification.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data/custom_data/question/detailed_questions/【1】先修课程.txt">
       <provider selected="true" editor-type-id="text-editor" />
@@ -905,20 +925,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/custom_data/question/vocabulary.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Neo4j-Spark-Course/neo4j.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Page/app/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="665">
@@ -929,45 +935,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spider/spider.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="94" column="7" lean-forward="true" selection-start-line="94" selection-start-column="7" selection-end-line="94" selection-end-column="7" />
-          <folding>
-            <element signature="e#13#22#0" expanded="true" />
-            <element signature="e#137#567#0" />
-            <element signature="e#639#1295#0" />
-            <element signature="e#1451#2230#0" />
-            <element signature="e#2176#2513#0" />
-            <element signature="e#2696#4378#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Page/static/xml/data.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="5" column="12" lean-forward="true" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Page/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-          <folding>
-            <element signature="e#22#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Neo4j-Spark-Course/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="604">
-          <caret line="35" column="38" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="38" />
-          <folding>
-            <element signature="e#42#65#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -981,37 +952,130 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spider/data.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="418">
+            <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/setting.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+    <entry file="file://$PROJECT_DIR$/Page/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/custom_data/question/detailed_questions/【4】学分.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/flask/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="1798" selection-start-line="1798" selection-end-line="1798" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Page/app/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Page/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+          <folding>
+            <element signature="e#22#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/custom_data/question/vocabulary.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Neo4j-Spark-Course/neo4j.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="946">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/data.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="35" selection-start-column="35" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Neo4j-Spark-Course/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1408">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
+          <folding>
+            <element signature="e#42#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/spider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2508">
+          <caret line="117" column="18" selection-start-line="117" selection-start-column="18" selection-end-line="117" selection-end-column="18" />
+          <folding>
+            <element signature="e#13#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/result.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/spider/neo4j.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+        <state relative-caret-position="660">
+          <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
           <folding>
             <element signature="e#24#44#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="399">
-            <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/data/custom_data/question/question_classification.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/custom_data/question/detailed_questions/【0】课程介绍.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Neo4j-Spark-Course/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="8" column="26" lean-forward="true" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
         </state>
       </provider>
     </entry>

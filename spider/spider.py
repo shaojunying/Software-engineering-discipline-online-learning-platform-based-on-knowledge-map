@@ -45,10 +45,13 @@ def convert_adv_course(courses_info, course_name_to_index):
             continue
         # 遍历所有的课程名称,如果先修课程中包含该名字,就加进去
         for course_name in course_name_to_index.keys():
+            if course_name not in course_adv:
+                continue
             if i not in adv_courses_dict.keys():
                 adv_courses_dict[i] = [course_name_to_index[course_name]]
             else:
                 adv_courses_dict[i].append(course_name_to_index[course_name])
+    print(adv_courses_dict)
     return adv_courses_dict
 
 
@@ -112,6 +115,7 @@ def parse_html(html_name):
     pyquery_html = pq(filename=html_name)
     # 提取课程标题和先修课程
     li = pyquery_html('body > div.WordSection2 > table,p')
+    print(li.text())
     courses_temp = re.findall("课程名称\n(.*?)"  # 课程名称
                               "\n课程编号\n(.*?)"  # 课程编号
                               "\n(.*?)"  # 英文名称 

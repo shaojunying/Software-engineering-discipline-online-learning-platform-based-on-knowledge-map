@@ -54,6 +54,63 @@ def main():
                 for i in result.keys():
                     result_str += i+', '
                 return "" + pattern[0] + "的先修课程为" + result_str
+        elif index == 2:
+            # 需要课程的开课学期
+            result = neo4j.get_course_semester(pattern[0])
+            if result is None:
+                return "没有要查询的课程"
+            else:
+                return "" + pattern[0] + "的开课学期为" + result
+        elif index == 3:
+            # 需要课程的必修选修
+            result = neo4j.get_course_optional(pattern[0])
+            if result is None:
+                return "没有要查询的课程"
+            else:
+                return "" + pattern[0] + "为" + ("选修" if result == 'y' else "必修")
+        elif index == 4:
+            # 需要课程的学分
+            result = neo4j.get_course_credit(pattern[0])
+            if result is None:
+                return "没有要查询的课程"
+            else:
+                return "" + pattern[0] + "的学分为" + result
+        elif index == 5:
+            # 需要课程的学时
+            result = neo4j.get_course_credit_hour(pattern[0])
+            if result is None:
+                return "没有要查询的课程"
+            else:
+                return "" + pattern[0] + "的学时为" + result
+        elif index == 6:
+            # 需要课程的课程编号
+            result = neo4j.get_course_id(pattern[0])
+            if result is None:
+                return "没有要查询的课程"
+            else:
+                return "" + pattern[0] + "的课程编号为" + result
+        elif index == 7:
+            # 需要课程的英文名称
+            result = neo4j.get_course_english_name(pattern[0])
+            if result is None:
+                return "没有要查询的课程"
+            else:
+                return "" + pattern[0] + "的英文名称为" + result
+        elif index == 8:
+            pass
+        elif index == 9:
+            # 需要课程的老师姓名
+            result = neo4j.get_course_teacher(pattern[0])
+            if result is None:
+                return "没有要查询的课程"
+            else:
+                return "" + pattern[0] + "的老师姓名为" + result
+        elif index == 10:
+            pass
+        elif index == 11:
+            pass
+        elif index == 12:
+            pass
         else:
             result = ""
             for i in pattern:

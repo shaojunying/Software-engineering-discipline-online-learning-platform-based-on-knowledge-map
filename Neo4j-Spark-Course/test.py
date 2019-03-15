@@ -1,6 +1,12 @@
-import numpy
-from sklearn.naive_bayes import MultinomialNB
-clf = MultinomialNB()
-clf.partial_fit(numpy.array([1,1]), numpy.array(['aa']), ['aa','bb'])
-clf.partial_fit(numpy.array([6,1]), numpy.array(['bb']))
-clf.predict(numpy.array([9,1]))
+def helper(n):
+    assert n >= 0
+    if n == 0:
+        print("前", 0, "项的阶乘是", 1)
+        return 1
+    result = n * helper(n - 1)
+    print("前", n, "项的阶乘是", result)
+    return result
+
+
+n = 10
+helper(n)
