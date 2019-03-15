@@ -1,5 +1,4 @@
-from flask import Flask, url_for, render_template
-from pandas import DataFrame
+from flask import Flask, render_template
 from py2neo import Graph
 
 app = Flask(__name__)
@@ -32,7 +31,11 @@ def adv_course(course_name):
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=True)
+    data1 = graph.run('match (cc:Course)-[StartWith]-(c:Course) where cc.name="算法分析与设计" return c')
+    # for item in data1:
+    #     print(item['c']['name'])
+    #     print(item['c']['details'])
+    # app.run(host='0.0.0.0', debug=True)
     # with app.test_request_context():
     # print(url_for('static',filename='neo4j.py'))
     # print(url_for('show_user_profile', username="shao"))

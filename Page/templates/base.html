@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{% block title %}{% endblock %}</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+  <!-- 其他css文件放在后面 -->
+  <link rel="stylesheet" href="{% static "css/base.css" %}">
+  {% block css %}{% endblock %}
+</head>
+
+<body>
+
+  <div class="ui container">
+    <div class="ui borderless menu">
+
+      {% if request.user.is_authenticated %}
+      <a class="header item" href="{% url 'index' %}">
+          <div class="ui animated fade inverted blue button">
+            <div class="visible content"><i class="home large icon"></i></div>
+            <div class="ui hidden content">
+              <div class="ui medium header">主页</div>
+            </div>
+          </div>
+      </a>
+      {% else %}
+      <a class="header item" href="{% url 'home' %}">
+          <div class="ui animated fade inverted blue button">
+            <div class="visible content"><i class="home large icon"></i></div>
+            <div class="ui hidden content">
+              <div class="ui medium header">主页</div>
+            </div>
+          </div>
+      </a>
+      {% endif %}
+      <a class="item {% block is_start_active %}{% endblock %}" href="{% url 'start' %}">
+        <button class="ui inverted blue button">开始</button>
+      </a>
+      <a class="item {% block is_graph_active %}{% endblock %}" href="{% url 'graph' %}">
+          <button class="ui inverted blue button">图谱</button>
+      </a>
+      <a class="item {% block is_search_active %}{% endblock %}" href="{% url 'search' %}">
+          <button class="ui inverted blue button">搜索</button>
+      </a>
+      <a class="item {% block is_others_active %}{% endblock %}" href="{% url 'others' %}">
+          <button class="ui inverted blue button">其他</button>
+      </a>
+
+      <div class="right menu">
+        {% if request.user.is_authenticated %}
+        <a class="item" href="{% url 'logout' %}">
+          <div class="ui animated fade inverted blue button">
+            <div class="visible content"><i class="user large icon"></i></div>
+            <div class="ui hidden content">
+              <div class="ui medium header">注销</div>
+            </div>
+          </div>
+        </a>
+        {% else %}
+        <a href="{% url 'login' %}" class="item">
+            <div class="ui animated fade inverted blue button">
+                <div class="visible content" style="width: 60px"><i class="user icon"></i></div>
+                <div class="ui hidden content">
+                  <div class="ui medium header">登录/注册</div>
+                </div>
+              </div>
+        </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+    {% block content %}{% endblock %}
+
+
+  <div class="container">
+    {% block lslide %}{% endblock %}
+  </div>
+  <div class="container rslide">
+    {% block rslide %}{% endblock %}
+  </div>
+  <div class="container footer">
+    {% block footer %}{% endblock %}
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+  {% block js %}{% endblock %}
+</body>
+
+</html>

@@ -1,6 +1,8 @@
 # coding=gbk
+import os
 import re
 import xml.dom.minidom
+from setting import data_xml_dir_path
 
 from pyquery import PyQuery as pq
 
@@ -9,7 +11,8 @@ doc = xml.dom.minidom.Document()
 
 def init_xml():
     """
-    :return: 课程名称的xml对象 先修课程的xml对象
+    初始化一个xml文件对象，返回两个节点
+    :return: 课程详细信息的xml对象 先修课程的xml对象
     """
     # 初始化一个xml对象
     global doc
@@ -27,59 +30,41 @@ def init_xml():
     return courses_name_xml, adv_courses_xml
 
 
-def save_course_name_and_detail_to_xml(courses, courses_name_xml):
+def convert_adv_course(courses_info, course_name_to_index):
     """
-    存储课程名称和详细介绍信息
-    :param courses: 所有课程组成的list
-    :param courses_name_xml: xml对象(课程信息将会保存到这里)
-    :return: 课程名称和对应下标组成的字典
-    """
-    course_index = 0
-    course_name_to_index = {}
-    courses_name = courses["name"]
-    courses_detail = courses["detail"]
-    for i in range(len(courses_name)):
-        # 将课程名称存进xml结点中
-        course_node_xml = create_node(node_parent=courses_name_xml,node_name="course")
-        create_node(node_parent=course_node_xml, node_name="name", node_content=courses_name[i])
-        create_node(node_parent=course_node_xml, node_name="details", node_content=courses_detail[i])
-
-        # 将课程名称和对应的下标存储成一个dict
-        course_name_to_index[courses_name[i]] = course_index
-        course_index += 1
-
-    return course_name_to_index
-
-
-def convert_adv_course(courses_advance, course_name_to_index):
-    """
-    :param courses_advance: 先修课程
+    将文字版的先修课程信息转为数字表示的字典
+    :param courses_info: 课程信息
     :param course_name_to_index: 课程名到下标的对应关系
-    :return: 先修课程字典
+    :return: 先修课程字典(用一门课的下标指代该门课程)
     """
-    pre_course_index = 0
-    adv_course_dict = {}
-    for course_adv in courses_advance:
-        # 取出课程的先修课信息
-        if course_adv != "无":
-            for course_adv_item in course_name_to_index.keys():
-                # 找出在本门课程的先修课中的课程名称
-                if course_adv_item in course_adv:
-                    if pre_course_index not in adv_course_dict.keys():
-                        adv_course_dict[pre_course_index] = [course_name_to_index[course_adv_item]]
-                    else:
-                        adv_course_dict[pre_course_index].append(course_name_to_index[course_adv_item])
+    adv_courses_dict = {}
+    for i, course_info in enumerate(courses_info):
+        # 获得当前课程的先修课程
+        course_adv = course_info['advance']
+        if course_adv == "无":
+            continue
+        # 遍历所有的课程名称,如果先修课程中包含该名字,就加进去
+        for course_name in course_name_to_index.keys():
+            if course_name not in course_adv:
+                continue
+            if i not in adv_courses_dict.keys():
+                adv_courses_dict[i] = [course_name_to_index[course_name]]
+            else:
+                adv_courses_dict[i].append(course_name_to_index[course_name])
+    print(adv_courses_dict)
+    return adv_courses_dict
 
-        pre_course_index += 1
-    return adv_course_dict
 
-
-def save_course_adv_to_xml(adv_course_dict, courses_adv_xml):
+def save_course_adv_to_xml(courses_info, course_name_to_index, courses_adv_xml):
     """
-    :param adv_course_dict: 先修课程字典
+    # 将先修课程信息存入xml中
+    :param courses_info: 课程信息
+    :param course_name_to_index:课程名与下标的对应关系
     :param courses_adv_xml: 先修课程的xml对象
-    :return: none
+    :return: None
     """
+    # 将文字版的课程先修信息转化为字典
+    adv_course_dict = convert_adv_course(courses_info=courses_info, course_name_to_index=course_name_to_index)
     for pre_course, adv_courses in adv_course_dict.items():
         for adv_course in adv_courses:
             # 创建一个先修课节点
@@ -90,14 +75,16 @@ def save_course_adv_to_xml(adv_course_dict, courses_adv_xml):
             create_node(node_parent=node, node_name="adv", node_content=pre_course)
             # 创建先修课中先修课程的信息
             create_node(node_parent=node, node_name="pre", node_content=adv_course)
+    print("成功为先修课程创建为xml节点")
 
 
 def create_node(node_parent, node_name, node_content=None):
     """
-    :param node_parent: 被添加元素的父节点
-    :param node_name: 要添加的节点名称
+    # 创建一个节点,节点的父节点为node_parent,新结点名字为node_name,节点内容为node_content
+    :param node_parent: 新节点的父节点
+    :param node_name: 新节点的名称
     :param node_content: 节点内容
-    :return:
+    :return: 新创建的节点对象
     """
     global doc
     node_adv = doc.createElement(node_name)
@@ -108,106 +95,90 @@ def create_node(node_parent, node_name, node_content=None):
 
 
 def save_xml_to_file():
+    """
+    将xml信息写入文件中
+    :return:
+    """
     global doc
-    fp = open('data.xml', 'w')
+    path = os.path.join('../', data_xml_dir_path)
+    fp = open(path, 'w')
     doc.writexml(fp, indent='\t', addindent='\t', newl='\n', encoding="gbk")
+    print('成功将xml节点存入'+path+'中')
 
 
-def parse_html(filename):
+def parse_html(html_name):
     """
-    :param filename: html文件名
-    :return: 课程信息list
+    解析html_name中的内容,将读取出的课程信息返回
+    :param html_name: html文件名
+    :return: [{"name":,"id":...}...]
     """
-    pyquery_html = pq(filename=filename)
+    pyquery_html = pq(filename=html_name)
     # 提取课程标题和先修课程
     li = pyquery_html('body > div.WordSection2 > table,p')
-    courses_temp = re.findall("课程名称\n(.*?)\n课程编号.*?先修课程\n(.*?)课程名称.*?二、课程教学目标(.*?)三、课程与支撑的毕业要求", li.text(),
+    print(li.text())
+    courses_temp = re.findall("课程名称\n(.*?)"  # 课程名称
+                              "\n课程编号\n(.*?)"  # 课程编号
+                              "\n(.*?)"  # 英文名称 
+                              "\n学分/学时\n(.*?)/(.*?)"
+                              "\n(.*?)"
+                              "\n开课学期\n(.*?)\n.*?"
+                              "\n先修课程\n(.*?)课程名称.*?二、课程教学目标(.*?)三、课程与支撑的毕业要求.*?执笔人:(.*?)审核人", li.text(),
                               flags=re.DOTALL)
+    courses_info = []
+    for item in courses_temp:
+        courses_info.append({
+            # 课程名称
+            "name": "".join(item[0].strip('中文：').split()),
+            # 课程编号
+            "id": "".join(item[1].strip("").split()),
+            # 英文名称
+            "english_name": item[2].strip("英文：").replace(u'\xa0', u' '),
+            # 学分
+            "credit": "".join(item[3].strip("").split()),
+            # 学时
+            "credit_hour": "".join(item[4].strip("").split()),
+            # # 选修/必修
+            "optional": 'y' if '必修（）' in "".join(item[5].strip("").split())
+                .replace(u'\u2a57', u'').replace(u'\uf0fc', u'') else 'n',
+            # 开课学期
+            "semester": "".join(item[6].strip("").split()),
+            # 先修课程
+            "advance": "".join(item[7].strip("").split()),
+            # 课程详细信息
+            "details": "".join(item[8].strip("").split()),
+            # 课程老师
+            "teacher": "".join(item[9].strip("").split())
+        })
+    print("成功解析html中的课程信息,课程总数为:", len(courses_info))
+    return courses_info
 
-    return {"name": [item[0].strip('中文：') for item in courses_temp],
-            "advance": [item[1].strip('序号课程名称 ') for item in courses_temp],
-            "detail": [item[2].strip() for item in courses_temp]}
 
-
-def find_all_course_can_study(courses_name, adv_course_dict, learned_courses=[]):
+def save_courses_info_to_xml(courses_info):
     """
-    遍历寻找所有的当前可以上的课程
-    :param courses_name: 课程名字对应的数组
-    :param adv_course_dict: 课程与先修课的对应字典
-    :param learned_courses: 已经学过的课程
-    :return: 可以选择的课程
+    将课程信息存入xml中
+    :param courses_info: 课程信息
+    :return: None
     """
-    can_be_selected_courses = []
-    for course_index in range(len(courses_name)):
-        # 当前课程没有学过
-        if course_index not in learned_courses:
-            # 当前课程有先修课程
-            if course_index in adv_course_dict:
-                # 判断是否所有先修课程都已经学过了
-                all_adv_courses_has_been_learned = True
-                for adv_course in adv_course_dict[course_index]:
-                    if adv_course not in learned_courses:
-                        all_adv_courses_has_been_learned = False
-                        break
-                if all_adv_courses_has_been_learned:
-                    can_be_selected_courses.append(course_index)
-            else:
-                can_be_selected_courses.append(course_index)
-    return can_be_selected_courses
-
-
-tags = ["数据库", "数据结构", "c语言", "Java", "Linux", "XML", "汇编语言", "软件测试", "C++", "计算机网络"]
-
-
-def count_tags_occurrences_in_every_courses_details(courses_details, favorite_tags_index):
-    """
-    统计用户选择的标签在每个课程培养目标中出现的次数
-    :param courses_details: 每个课程的培养目标
-    :param favorite_tags_index: 用户选择的标签的下标
-    :return:
-    """
-    tags_occurrences = []
-    for course_index in range(len(courses_details)):
-        tags_occurrences.append(0)
-        for favorite_tag_index in favorite_tags_index:
-            # 统计一个标签在课程介绍中出现的次数
-            tag_occurrences_in_one_class = courses_details[course_index].count(tags[favorite_tag_index])
-            tags_occurrences[course_index] += tag_occurrences_in_one_class
-    return tags_occurrences
-
-
-def sort_can_be_learned_courses_by_favorite_tags(learned_courses_index, can_be_selected_courses, tags_occurrences):
-    """
-    将用户没有选择且可以被选择的课程按照课程中包含用户选择的标签数量进行排序
-    :param learned_courses_index:已经学习的课程的下标
-    :param can_be_selected_courses:用户可以选择的课程的下标
-    :param tags_occurrences:用户选择的标签在每个课程介绍中出现的次数
-    :return:
-    """
-    unsort_result = {}
-    for can_be_selected_course in can_be_selected_courses:
-        if can_be_selected_course not in learned_courses_index:
-            unsort_result[can_be_selected_course] = tags_occurrences[can_be_selected_course]
-    # 按照标签数量对课程下标进行排序
-    result = sorted(unsort_result.items(), key=lambda item: -item[1])
-    return result
+    courses_info_xml, adv_courses_xml = init_xml()
+    course_name_to_index = {}
+    for i, course_info in enumerate(courses_info):
+        course_node_xml = create_node(node_parent=courses_info_xml, node_name="course")
+        for key, value in course_info.items():
+            if key == 'advance':
+                continue
+            create_node(node_parent=course_node_xml, node_name=str(key), node_content=str(value))
+        # 将课程名称和对应的下标存储成一个dict
+        course_name_to_index[course_info['name']] = i
+    print("成功为课程的信息(除先修课程)创建为xml节点")
+    save_course_adv_to_xml(courses_info, course_name_to_index, adv_courses_xml)
+    save_xml_to_file()
 
 
 def main():
-    courses = parse_html("hello.htm")
-    courses_name_xml, adv_courses_xml = init_xml()
-    course_name_to_index = save_course_name_and_detail_to_xml(courses, courses_name_xml)
-    adv_course_dict = convert_adv_course(courses["advance"], course_name_to_index)
-    save_course_adv_to_xml(adv_course_dict, adv_courses_xml)
-    save_xml_to_file()
-
-    can_be_selected_courses = find_all_course_can_study(courses_name=courses["name"], adv_course_dict=adv_course_dict,
-                                                        learned_courses=[])
-    tags_occurrences = count_tags_occurrences_in_every_courses_details(courses_details=courses["detail"],
-                                                                       favorite_tags_index=[0, 1, 2, 4, 5, 6,7, 8])
-    print(sort_can_be_learned_courses_by_favorite_tags(learned_courses_index=[],
-                                                       can_be_selected_courses=can_be_selected_courses,
-                                                       tags_occurrences=tags_occurrences))
+    # 解析xml
+    courses_info = parse_html("hello.htm")
+    # 将解析出的课程信息存入xml中
+    save_courses_info_to_xml(courses_info)
 
 
 if __name__ == '__main__':

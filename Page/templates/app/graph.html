@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}图谱{% endblock %}
+{% block is_graph_active %}active{% endblock %}
+{% block content %}
+ <div style="text-align: center;">
+     <svg width="800" height="560" id="svg1"></svg>
+     <div id="search1">
+         <input type="text" class="form-control">
+     </div>
+     <div id="info">
+         <h4></h4>
+     </div>
+ </div>
+{% endblock %}
+
+{% block css %}
+    {% load staticfiles %}
+    <link href="{% static 'css/graph.css' %}" type="text/css"/>
+    <link rel="stylesheet" href="{% static 'css/graph.css' %}">
+{% endblock %}
+
+{% block js %}
+    {% load staticfiles %}
+    <script src="{% static 'js/d3.min.js' %}"></script>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/graph.js' %}"></script>
+{% endblock %}
+
+
+
+{% block lslide %}{% endblock %}
+
+{% block rslide %}{% endblock %}
+
+ {% block footer %}{% endblock %}

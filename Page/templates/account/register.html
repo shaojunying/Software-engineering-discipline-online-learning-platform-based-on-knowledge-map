@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+{% block title %}
+注册
+{% endblock %}
+
+{% block content %}
+<div class="ui middle aligned center aligned grid">
+    <div class="column">
+        {% if user_form.errors %}
+        <h2 class="ui teal image header">
+            <i class="exclamation icon"></i>
+            <div class="content">
+                您的输入有误,请重新输入
+            </div>
+        </h2>
+        {% else %}
+        <h2 class="ui teal image header">
+            <i class="user icon"></i>
+            <div class="content">
+                注册您的账号
+            </div>
+        </h2>
+        {% endif %}
+
+        <form action="." method="post" id="register_form" class="ui large form">
+            <div class="ui raised segment">
+                {% for field in user_form %}
+                <div class="field">
+                    <div class="ui left icon input">
+                        {% ifequal forloop.counter 1 %}
+                        <i class="user icon"></i>
+                        {% else %}
+                        <i class="lock icon"></i>
+                        {% endifequal %}
+                        {{ field }}
+                    </div>
+                </div>
+                <div class="form_error field">{{ field.errors }}</div>
+                {% endfor %}
+                {% csrf_token %}
+                <div class="ui fluid large teal submit button" onclick="document.getElementById('register_form').submit()">注册</div>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+    document.getElementById("id_username").setAttribute("placeholder", "请输入用户名")
+    document.getElementById("id_password").setAttribute("placeholder", "请输入密码")
+    document.getElementById("id_password2").setAttribute("placeholder", "请再次输入密码")
+</script>
+<!-- <div class="ui centered align grid">
+    <div class="form-box">
+        <div class="ui placeholder segment centered">
+            <div class="column">
+                {% if form.errors %}
+                <div class="field">您的账号不匹配,请重新输入</div>
+                {% else %}
+                <div class="field">
+                    <h3>请输入您的以下字段注册账号</h3>
+                </div>
+                {% endif %}
+                <div class="ui hidden divider"></div>
+                <div class="ui form">
+                    <form action="." method="post" id="register_form" novalidate>
+                        {% for field in user_form %}
+                        <div class="field">{{ field.label_tag }}<div class="ui left input">{{ field }}</div>
+                        </div>
+                        <div class="form_error field">{{ field.errors }}</div>
+                        {% endfor %}
+                        {% csrf_token %}
+                        <div class="ui blue submit button" onclick="document.getElementById('register_form').submit()">注册</div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+{% endblock %}
+
+{% block lslide %}{% endblock %}
+
+{% block rslide %}{% endblock %}
+
+{% block footer %}{% endblock %}

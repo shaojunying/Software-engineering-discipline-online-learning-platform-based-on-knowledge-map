@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}开始{% endblock %}
+{% block is_start_active %}active{% endblock %}
+{% block content %}
+<div class="ui container">
+    <div class="heaer">如何开始?</div>
+    <div class="ui heaer">您可以<a href="{% url 'graph' %}">浏览图谱</a></div>
+    <div class="ui heaer">也可以<a href="{% url 'search' %}">搜索问题</a></div>
+    <div class="ui heaer">或者<a href="{% url 'others' %}">其他功能</a></div>
+</div>
+{% endblock %}
+
+{% block lslide %}{% endblock %}
+
+{% block rslide %}{% endblock %}
+
+ {% block footer %}{% endblock %}

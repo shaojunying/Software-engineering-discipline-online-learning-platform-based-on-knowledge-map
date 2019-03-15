@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}软件工程学习平台{% endblock %}
+
+{% block content %}
+
+<div class="ui container homepage">
+        <div class="hidden divider"></div>
+        <div class="ui segment center aligned ">
+                <div class="ui huge header">欢迎来到基于知识图谱的软件工程学习平台</div>
+                <div class="ui large image rounded center aligned" ><img src="http://pic164.nipic.com/file/20180510/12170832_193612202330_2.jpg"></div>
+                <div class="ui heaer">您是否在知识的海洋中迷失了方向,不知何去何从?</div>
+                <div class="ui heaer">您是否在总是困惑所学知识有何用处,如何相互关联?</div>
+                <div class="ui heaer">您是否想要理清思绪,但是却发现效果不佳?</div>
+                <div class="ui heaer">没错,您需要的不是再多一倍的努力,而是适合您的方法</div>
+                <div class="ui heaer">从小到大以来,我们的教育以线性思维的方式给我们灌输知识</div>
+                <div class="ui heaer">然而,人脑却以非线性思维来思考和运作的</div>
+                <div class="ui heaer">我们使用知识图谱为您构建了知识框架,让您尽可能地以非线性思维学习</div>
+                <div class="ui heaer">让您学习更快,记得更牢,学的更有效率</div>
+                <div class="ui header">想要开始,请点此<a href="{% url 'login' %}">登录/注册</a>.</div>
+        </div>
+</div>
+{% endblock %}
+
+{% block lslide %}{% endblock %}
+
+{% block rslide %}{% endblock %}
+
+{% block footer %}{% endblock %}
