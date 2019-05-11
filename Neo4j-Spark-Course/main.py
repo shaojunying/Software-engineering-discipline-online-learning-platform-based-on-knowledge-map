@@ -34,9 +34,13 @@ def main():
         print(question)
         """分词问题question,返回模型的下标,以及对应的问题模板"""
         index, pattern = query_process.analysis_query(question)
-        if index == 0:
+        print(index, pattern)
+        # if index == 0:
+        if True:
             # 需要课程的详细信息
+            print("获取之前")
             result = neo4j.get_course_details(pattern[0])
+            print("获取之后")
             if result is None:
                 print("没有要查询的课程")
                 return "没有要查询的课程"
@@ -52,7 +56,7 @@ def main():
             else:
                 result_str = ""
                 for i in result.keys():
-                    result_str += i+', '
+                    result_str += i + ', '
                 return "" + pattern[0] + "的先修课程为" + result_str
         elif index == 2:
             # 需要课程的开课学期

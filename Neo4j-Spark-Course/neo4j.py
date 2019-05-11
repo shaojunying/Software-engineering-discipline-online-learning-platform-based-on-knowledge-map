@@ -14,6 +14,7 @@ class Neo4j:
         :return:
         """
         course_node = self.get_course_node(course_name)
+        print(course_node)
         return course_node['details'] if course_node else None
 
     def get_course_adv(self, course_name):

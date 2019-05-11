@@ -5,9 +5,6 @@ from pyspark.mllib.classification import NaiveBayes
 from pyspark.mllib.linalg import Vectors
 from pyspark.mllib.regression import LabeledPoint
 
-import numpy
-from sklearn.naive_bayes import MultinomialNB
-
 from helper import *
 from setting import *
 

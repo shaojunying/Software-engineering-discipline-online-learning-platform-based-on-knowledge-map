@@ -2,7 +2,9 @@
 import os
 
 neo4j_password = "shao1999"
-neo4j_url = "http://localhost:11005"
+# neo4j_url = "http://localhost:11005/db/data/"
+neo4j_url = "http://119.3.208.1:7474/db/data"
+neo4j_user = "neo4j"
 
 # HanLP分词词典及自定义问题模板根目录
 root_dir_path = "..\\data"
