@@ -22,9 +22,9 @@ Login signup Responsive web template, Smartphone Compatible web template, free w
 	<i> </i>
 	<div class="s-bar">
 
-	   <form action="" onsubmit="return getAdvCourses()">
-		<input id="course_name" type="text" value="搜索" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '课程名';}">
-           的先修课程
+	   <form id="question_form" action="#" onsubmit="getAdvCourses();return false">
+		<input id="question" name="question" type="text" value="搜索"
+               onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}">
         <button type="submit">搜索</button>
 	  </form>
         <p class="lead text-center animated fadeInUp" data-animate="fadeInUp"  id="answer"></p>
@@ -41,43 +41,6 @@ Login signup Responsive web template, Smartphone Compatible web template, free w
 </body>
 <script src="{% static 'js/d3.min.js' %}"></script>
 <script src="{% static 'js/graph.js' %}"></script>
-<script>
-    let $answer = $("#answer");
-    function getAdvCourses() {
-        let $courseName = $('#course_name');
-        $.ajax({
-            async:true,
-            type:"GET",
-            dataType:"json",
-            url: 'http://127.0.0.1:5000/adv/'+$courseName.val(),
-            error : function(XMLHttpRequest, textStatus, errorThrown) {
-                console.log(XMLHttpRequest);
-                console.log(textStatus);
-                console.log(errorThrown);
-            },
-            success: function (response) {
-                {#let courses = response['courses'];#}
-                {#let relationship = response['relationship'];#}
-                {#drawPartCourses(courses,relationship);#}
-                console.log(response);
-                let courses = response['courses'];
-                $answer.empty();
-                if (courses == null || Object.keys(courses).length === 1){
-                    $answer.append("没有先修课程");
-                }
-                let result = "";
-                for(let course_name in courses){
-                    {#course_name是每一门先修课程的名字#}
-                    {#course_detail是每一门先修课程的详细介绍#}
-                    let course_detail = courses[course_name];
-                    result+=course_name+" ";
-                }
-                $answer.append(result);
-            },
-            crossDomain: true
-        });
-        return false;
-    }
-</script>
+<script src="{% static 'js/search.js' %}"></script>
 
 </html>

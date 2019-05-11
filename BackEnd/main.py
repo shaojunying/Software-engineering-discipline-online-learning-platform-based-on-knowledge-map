@@ -81,7 +81,7 @@ def main():
     def query():
 
         # 获取question参数
-        question = request.form.get('question')
+        question = request.args.get('question')
         if not question:
             return ResponseData(ExceptionMsg.REQUIRE_QUESTION).encode()
 
@@ -93,34 +93,51 @@ def main():
             1,['离散数学','先修课程']
         """
         question_index, pattern = query_process.analysis_query(question)
+        data = {'type': question_index}
         if question_index == 1:
             # 获取课程的先修课程
             course_name = pattern[0]
-            return service.get_adv_courses(course_name)
+            course = neo4j.get_course_node(course_name)
+            if not course:
+                return ResponseData(ExceptionMsg.NONEXISTENT_COURSE).encode()
+
+            # 获取课程的先修课程
+            data['result'] = neo4j.get_course_adv(course_name)
         elif question_index == 8:
             # 获取课程的授课老师
             course_name = pattern[0]
-            return service.get_course_teacher(course_name)
+
+            # 获取课程节点
+            course = neo4j.get_course_node(course_name)
+            if not course:
+                return ResponseData(ExceptionMsg.NONEXISTENT_COURSE).encode()
+
+            # 获取课程的教师信息
+            teacher = neo4j.get_course_teacher(course_name)
+            if not teacher:
+                return ResponseData(ExceptionMsg.NO_INFO_ABOUT_THIS_COURSE).encode()
+            data['result'] = teacher
         else:
             # 获取课程的属性信息
             course_name = pattern[0]
             course_info = neo4j.get_course_node(course_name)
             if question_index == 0:
-                return ResponseData(data=course_info['details']).encode()
+                data['result'] = course_info['details']
             elif question_index == 2:
-                return ResponseData(data=course_info['semester']).encode()
+                data['result'] = course_info['semester']
             elif question_index == 3:
-                return ResponseData(data=course_info['optional']).encode()
+                data['result'] = course_info['optional']
             elif question_index == 4:
-                return ResponseData(data=course_info['credit']).encode()
+                data['result'] = course_info['credit']
             elif question_index == 5:
-                return ResponseData(data=course_info['credit_hour']).encode()
+                data['result'] = course_info['credit_hour']
             elif question_index == 6:
-                return ResponseData(data=course_info['id']).encode()
+                data['result'] = course_info['id']
             elif question_index == 7:
-                return ResponseData(data=course_info['english_name']).encode()
+                data['result'] = course_info['english_name']
             else:
                 return ResponseData(ExceptionMsg.QUESTION_IDENTIFICATION_WRONG).encode()
+        return ResponseData(data=data).encode()
 
     app.run(debug=True)
 

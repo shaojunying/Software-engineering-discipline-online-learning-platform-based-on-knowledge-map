@@ -2,38 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4552fdca-073f-45b6-bad8-eaa5348bde44" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/BackEnd/ExceptionMsg.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BackEnd/ResponseData.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BackEnd/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BackEnd/data/custom_data/dictionary/course_dict.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BackEnd/data_setting.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BackEnd/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Software-engineering-discipline-online-learning-platform-based-on-knowledge-map.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Software-engineering-discipline-online-learning-platform-based-on-knowledge-map.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Page/static/js/search.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Neo4j-Spark-Course/ModelProcess.py" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/ModelProcess.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Neo4j-Spark-Course/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/Service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Neo4j-Spark-Course/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Neo4j-Spark-Course/neo4j.py" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/neo4j.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Neo4j-Spark-Course/test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/custom_data/dictionary/course_dict.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/custom_data/question/detailed_questions/【0】课程介绍.txt" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/data/custom_data/question/detailed_questions/【0】课程介绍.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/custom_data/question/detailed_questions/【10】老师邮箱.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/custom_data/question/detailed_questions/【11】教学内容.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/custom_data/question/detailed_questions/【12】知识点.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/custom_data/question/detailed_questions/【1】先修课程.txt" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/data/custom_data/question/detailed_questions/【1】先修课程.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/custom_data/question/detailed_questions/【2】开课学期.txt" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/data/custom_data/question/detailed_questions/【2】开课学期.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/custom_data/question/detailed_questions/【3】必修选修.txt" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/data/custom_data/question/detailed_questions/【3】必修选修.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/custom_data/question/detailed_questions/【4】学分.txt" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/data/custom_data/question/detailed_questions/【4】学分.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/custom_data/question/detailed_questions/【5】学时.txt" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/data/custom_data/question/detailed_questions/【5】学时.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/custom_data/question/detailed_questions/【6】课程编号.txt" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/data/custom_data/question/detailed_questions/【6】课程编号.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/custom_data/question/detailed_questions/【7】英文名称.txt" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/data/custom_data/question/detailed_questions/【7】英文名称.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/custom_data/question/detailed_questions/【8】教材.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/custom_data/question/detailed_questions/【9】授课老师姓名.txt" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/data/custom_data/question/detailed_questions/【8】授课老师姓名.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/custom_data/question/question_classification.txt" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/data/custom_data/question/question_classification.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/custom_data/question/vocabulary.txt" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/data/custom_data/question/vocabulary.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/stopwords.txt" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/data/stopwords.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/setting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Page/templates/app/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/Page/templates/app/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Page/testpy2neo/testneo4j.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spider/neo4j.py" beforeDir="false" afterPath="$PROJECT_DIR$/spider/neo4j.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,15 +50,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BackEnd/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="152">
+              <caret line="84" column="24" lean-forward="true" selection-start-line="84" selection-start-column="24" selection-end-line="84" selection-end-column="24" />
               <folding>
                 <element signature="e#42#74#0" expanded="true" />
-                <element signature="e#302#316#0" />
-                <element signature="e#839#1128#0" />
-                <element signature="e#1213#1497#0" />
-                <element signature="e#1588#1876#0" />
-                <element signature="e#1926#2206#0" />
               </folding>
             </state>
           </provider>
@@ -91,74 +62,59 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BackEnd/Service.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="433">
-              <caret line="34" column="39" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="39" />
+            <state relative-caret-position="76">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
-                <element signature="e#1293#1927#0" />
-                <element signature="e#2028#2501#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/setting.py">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="152">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BackEnd/neo4j.py">
+        <entry file="file://$PROJECT_DIR$/Page/templates/app/graph.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
-              <folding>
-                <element signature="e#0#24#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="286">
+              <caret line="88" column="59" lean-forward="true" selection-start-line="88" selection-start-column="59" selection-end-line="89" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Page/templates/app/search.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="137">
+              <caret line="28" column="13" lean-forward="true" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Page/static/js/search.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="19">
+              <caret line="33" column="30" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Page/templates/app/search.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="51" column="41" lean-forward="true" selection-start-line="51" selection-start-column="41" selection-end-line="51" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BackEnd/data/custom_data/question/question_classification.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="7" lean-forward="true" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BackEnd/ModelProcess.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="220" column="11" lean-forward="true" selection-start-line="220" selection-start-column="11" selection-end-line="220" selection-end-column="11" />
-              <folding>
-                <element signature="e#0#12#0" expanded="true" />
-                <element signature="e#317#751#0" />
-                <element signature="e#799#1157#0" />
-                <element signature="e#1206#2003#0" />
-                <element signature="e#2044#2431#0" />
-                <element signature="e#2480#2845#0" />
-                <element signature="e#3976#4629#0" />
-                <element signature="e#4679#5227#0" />
-                <element signature="e#5275#5791#0" />
-                <element signature="e#5845#6211#0" />
-                <element signature="e#6252#6342#0" />
-              </folding>
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="473">
+                <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -173,16 +129,13 @@
         <option value="Julia File" />
         <option value="HTTP Request" />
         <option value="CSS File" />
-        <option value="JavaScript File" />
         <option value="Python Script" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>__in</find>
-      <find>什么</find>
-      <find>编号</find>
       <find>h4</find>
       <find>padding</find>
       <find>课程名称</find>
@@ -210,6 +163,9 @@
       <find>算法与数据结构</find>
       <find>Vectors</find>
       <find>_route</find>
+      <find>pyhanlp</find>
+      <find>$('</find>
+      <find>$answer.val</find>
     </findStrings>
     <replaceStrings>
       <replace>adv</replace>
@@ -226,10 +182,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/data/custom_data/question/detailed_questions/【7】英文名称.txt" />
-        <option value="$PROJECT_DIR$/data/custom_data/question/detailed_questions/【11】教学内容.txt" />
-        <option value="$PROJECT_DIR$/data/custom_data/question/detailed_questions/【9】授课老师姓名.txt" />
-        <option value="$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/scipy/optimize/tnc.py" />
         <option value="$PROJECT_DIR$/Page/testpy2neo/testneo4j.py" />
         <option value="$PROJECT_DIR$/Page/app/forms.py" />
         <option value="$PROJECT_DIR$/Page/app/urls.py" />
@@ -243,10 +195,8 @@
         <option value="$PROJECT_DIR$/pages/main/test.html" />
         <option value="$PROJECT_DIR$/Page/templates/base.html" />
         <option value="$PROJECT_DIR$/Page/templates/registration/logged_out.html" />
-        <option value="$PROJECT_DIR$/Page/templates/app/search.html" />
         <option value="$PROJECT_DIR$/Page/static/css/base.css" />
         <option value="$PROJECT_DIR$/spider/spider.py" />
-        <option value="$PROJECT_DIR$/spider/neo4j.py" />
         <option value="$PROJECT_DIR$/spider/data.xml" />
         <option value="$PROJECT_DIR$/Page/static/graph.js" />
         <option value="$PROJECT_DIR$/package.json" />
@@ -275,8 +225,14 @@
         <option value="$PROJECT_DIR$/BackEnd/Service.py" />
         <option value="$PROJECT_DIR$/BackEnd/neo4j.py" />
         <option value="$PROJECT_DIR$/BackEnd/ExceptionMsg.py" />
-        <option value="$PROJECT_DIR$/BackEnd/main.py" />
         <option value="$PROJECT_DIR$/setting.py" />
+        <option value="$PROJECT_DIR$/spider/neo4j.py" />
+        <option value="$PROJECT_DIR$/requirement.txt" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/Page/templates/app/search.html" />
+        <option value="$PROJECT_DIR$/BackEnd/main.py" />
+        <option value="$PROJECT_DIR$/Page/static/js/search.js" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -329,7 +285,55 @@
             <path>
               <item name="Software-engineering-discipline-online-learning-platform-based-on-knowledge-map" type="b2602c69:ProjectViewProjectNode" />
               <item name="Software-engineering-discipline-online-learning-platform-based-on-knowledge-map" type="462c0819:PsiDirectoryNode" />
+              <item name="BackEnd" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Software-engineering-discipline-online-learning-platform-based-on-knowledge-map" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Software-engineering-discipline-online-learning-platform-based-on-knowledge-map" type="462c0819:PsiDirectoryNode" />
+              <item name="BackEnd" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Software-engineering-discipline-online-learning-platform-based-on-knowledge-map" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Software-engineering-discipline-online-learning-platform-based-on-knowledge-map" type="462c0819:PsiDirectoryNode" />
+              <item name="BackEnd" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="custom_data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Software-engineering-discipline-online-learning-platform-based-on-knowledge-map" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Software-engineering-discipline-online-learning-platform-based-on-knowledge-map" type="462c0819:PsiDirectoryNode" />
+              <item name="BackEnd" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="custom_data" type="462c0819:PsiDirectoryNode" />
+              <item name="question" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Software-engineering-discipline-online-learning-platform-based-on-knowledge-map" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Software-engineering-discipline-online-learning-platform-based-on-knowledge-map" type="462c0819:PsiDirectoryNode" />
+              <item name="BackEnd" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="custom_data" type="462c0819:PsiDirectoryNode" />
+              <item name="question" type="462c0819:PsiDirectoryNode" />
+              <item name="detailed_questions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Software-engineering-discipline-online-learning-platform-based-on-knowledge-map" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Software-engineering-discipline-online-learning-platform-based-on-knowledge-map" type="462c0819:PsiDirectoryNode" />
               <item name="Page" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Software-engineering-discipline-online-learning-platform-based-on-knowledge-map" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Software-engineering-discipline-online-learning-platform-based-on-knowledge-map" type="462c0819:PsiDirectoryNode" />
+              <item name="Page" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Software-engineering-discipline-online-learning-platform-based-on-knowledge-map" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Software-engineering-discipline-online-learning-platform-based-on-knowledge-map" type="462c0819:PsiDirectoryNode" />
+              <item name="Page" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Software-engineering-discipline-online-learning-platform-based-on-knowledge-map" type="b2602c69:ProjectViewProjectNode" />
@@ -617,7 +621,7 @@
       <workItem from="1555929015214" duration="2782000" />
       <workItem from="1556884183368" duration="2395000" />
       <workItem from="1556941263417" duration="2305000" />
-      <workItem from="1557542795570" duration="17982000" />
+      <workItem from="1557542795570" duration="25458000" />
     </task>
     <task id="LOCAL-00001" summary="基本实现了问答系统的建立,还有一些问题需要进一步完善">
       <created>1550846059047</created>
@@ -637,7 +641,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="360826000" />
+    <option name="totallyTimeSpent" value="368302000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
@@ -651,12 +655,12 @@
       <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.6332623" visible="true" weight="0.21648793" />
       <window_info id="Structure" order="6" sideWeight="0.36808512" side_tool="true" weight="0.19664429" />
       <window_info anchor="bottom" id="Version Control" order="0" weight="0.36416185" />
-      <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.4966488" weight="0.316474" />
+      <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.4966488" visible="true" weight="0.18786128" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50402147" side_tool="true" weight="0.31791908" />
       <window_info anchor="bottom" id="Database Changes" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32658958" />
-      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.49597856" weight="0.2947977" />
+      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.49597856" weight="0.2933526" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.39739883" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -684,15 +688,15 @@
       <window_info id="UI Designer" order="2" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Favorites" order="4" sideWeight="0.5014045" side_tool="true" weight="0.15771812" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.6332623" visible="true" weight="0.32404542" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.6332623" visible="true" weight="0.21648793" />
       <window_info id="Structure" order="6" sideWeight="0.36808512" side_tool="true" weight="0.19664429" />
       <window_info anchor="bottom" id="Version Control" order="0" weight="0.36416185" />
-      <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.4966488" weight="0.316474" />
+      <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.4966488" weight="0.18786128" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50402147" side_tool="true" weight="0.31791908" />
       <window_info anchor="bottom" id="Database Changes" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32658958" />
-      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.49597856" weight="0.31791908" />
+      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.49597856" weight="0.2933526" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.39739883" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -776,7 +780,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Software_engineering_discipline_online_learning_platform_based_on_knowledge_map$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1557543571305" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Neo4j-Spark-Course" />
-    <SUITE FILE_PATH="coverage/Software_engineering_discipline_online_learning_platform_based_on_knowledge_map$main.coverage" NAME="main Coverage Results" MODIFIED="1557578998285" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BackEnd" />
+    <SUITE FILE_PATH="coverage/Software_engineering_discipline_online_learning_platform_based_on_knowledge_map$main.coverage" NAME="main Coverage Results" MODIFIED="1557585243932" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BackEnd" />
     <SUITE FILE_PATH="coverage/Software_engineering_discipline_online_learning_platform_based_on_knowledge_map$spider.coverage" NAME="spider Coverage Results" MODIFIED="1551859423228" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider" />
     <SUITE FILE_PATH="coverage/Software_engineering_discipline_online_learning_platform_based_on_knowledge_map$ModelProcess.coverage" NAME="ModelProcess Coverage Results" MODIFIED="1557568940905" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BackEnd" />
     <SUITE FILE_PATH="coverage/Software_engineering_discipline_online_learning_platform_based_on_knowledge_map$test1.coverage" NAME="test1 Coverage Results" MODIFIED="1550065999766" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider" />
@@ -791,50 +795,6 @@
     <SUITE FILE_PATH="coverage/Software_engineering_discipline_online_learning_platform_based_on_knowledge_map$neo4j.coverage" NAME="neo4j Coverage Results" MODIFIED="1552300046521" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Page/app/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spider/data.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="35" selection-start-column="35" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spider/spider.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2128">
-          <caret line="117" column="18" selection-start-line="117" selection-start-column="18" selection-end-line="117" selection-end-column="18" />
-          <folding>
-            <element signature="e#13#22#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spider/result.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spider/neo4j.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
-          <folding>
-            <element signature="e#24#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Page/templates/data.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-114">
-          <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package-lock.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/d3/dist/d3.min.js" />
     <entry file="file://$PROJECT_DIR$/Page/static/js/jquery.min.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -941,13 +901,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BackEnd/data_setting.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BackEnd/data/custom_data/question/vocabulary.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -1011,43 +964,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BackEnd/ModelProcess.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="220" column="11" lean-forward="true" selection-start-line="220" selection-start-column="11" selection-end-line="220" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-            <element signature="e#317#751#0" />
-            <element signature="e#799#1157#0" />
-            <element signature="e#1206#2003#0" />
-            <element signature="e#2044#2431#0" />
-            <element signature="e#2480#2845#0" />
-            <element signature="e#3976#4629#0" />
-            <element signature="e#4679#5227#0" />
-            <element signature="e#5275#5791#0" />
-            <element signature="e#5845#6211#0" />
-            <element signature="e#6252#6342#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BackEnd/ResponseData.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BackEnd/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1767">
-          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BackEnd/data/custom_data/question/question_classification.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
-          <caret line="4" column="7" lean-forward="true" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+          <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -1065,50 +985,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BackEnd/ExceptionMsg.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="42" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BackEnd/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="e#42#74#0" expanded="true" />
-            <element signature="e#302#316#0" />
-            <element signature="e#839#1128#0" />
-            <element signature="e#1213#1497#0" />
-            <element signature="e#1588#1876#0" />
-            <element signature="e#1926#2206#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BackEnd/Service.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="34" column="39" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-            <element signature="e#1293#1927#0" />
-            <element signature="e#2028#2501#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="228">
-            <caret line="12" selection-start-line="12" selection-end-line="21" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Page/manage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -1119,17 +995,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/setting.py">
+    <entry file="file://$PROJECT_DIR$/Page/requirement.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirement.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BackEnd/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="-2147">
+          <caret line="3" column="21" lean-forward="true" selection-end-line="218" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Page/templates/app/graph.html">
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/flask/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/neo4j.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1179">
-          <caret line="91" column="12" lean-forward="true" selection-start-line="91" selection-start-column="12" selection-end-line="91" selection-end-column="12" />
+        <state>
+          <caret line="3" column="11" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BackEnd/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BackEnd/data_setting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BackEnd/ExceptionMsg.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="42" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BackEnd/ModelProcess.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4180">
+          <caret line="220" column="11" selection-start-line="220" selection-start-column="11" selection-end-line="220" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1143,10 +1062,78 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/BackEnd/ResponseData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Page/testpy2neo/testneo4j.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="8" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Page/templates/app/graph.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="88" column="59" lean-forward="true" selection-start-line="88" selection-start-column="59" selection-end-line="89" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BackEnd/Service.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BackEnd/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="84" column="24" lean-forward="true" selection-start-line="84" selection-start-column="24" selection-end-line="84" selection-end-column="24" />
+          <folding>
+            <element signature="e#42#74#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Page/templates/app/search.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="51" column="41" lean-forward="true" selection-start-line="51" selection-start-column="41" selection-end-line="51" selection-end-column="41" />
+        <state relative-caret-position="137">
+          <caret line="28" column="13" lean-forward="true" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Page/static/js/search.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="33" column="30" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="473">
+            <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

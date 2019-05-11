@@ -1,0 +1,8 @@
+Flask==0.10.1
+jieba==0.39
+Django==2.1.1
+py2neo==4.2.0
+pyquery==1.4.0
+requests==2.21.0
+numpy==1.15.0rc2+mkl
+scikit_learn==0.21.0
