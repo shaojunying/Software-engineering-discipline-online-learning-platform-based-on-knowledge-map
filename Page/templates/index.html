@@ -1,29 +1,401 @@
-{% extends 'base.html' %}
+{% load static %}
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
 
-{% block title %}软件工程学习平台{% endblock %}
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="all,follow">
+<meta name="googlebot" content="index,follow,snippet,archive">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-{% block content %}
+<title>Home</title>
+<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<meta name="keywords" content="">
 
-<div class="ui container homepage">
-        <div class="hidden divider"></div>
-        <div class="ui segment center aligned ">
-                <div class="ui huge header">欢迎来到基于知识图谱的软件工程学习平台</div>
-                <div class="ui large image rounded center aligned" ><img src="http://pic164.nipic.com/file/20180510/12170832_193612202330_2.jpg"></div>
-                <div class="ui heaer">您是否在知识的海洋中迷失了方向,不知何去何从?</div>
-                <div class="ui heaer">您是否在总是困惑所学知识有何用处,如何相互关联?</div>
-                <div class="ui heaer">您是否想要理清思绪,但是却发现效果不佳?</div>
-                <div class="ui heaer">没错,您需要的不是再多一倍的努力,而是适合您的方法</div>
-                <div class="ui heaer">从小到大以来,我们的教育以线性思维的方式给我们灌输知识</div>
-                <div class="ui heaer">然而,人脑却以非线性思维来思考和运作的</div>
-                <div class="ui heaer">我们使用知识图谱为您构建了知识框架,让您尽可能地以非线性思维学习</div>
-                <div class="ui heaer">让您学习更快,记得更牢,学的更有效率</div>
-                <div class="ui header">想要开始,请点此<a href="{% url 'login' %}">登录/注册</a>.</div>
-        </div>
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,900' rel='stylesheet' type='text/css'>
+
+<!-- Bootstrap and Font Awesome css -->
+<link href="{% static 'css/font-awesome.css' %}" rel="stylesheet">
+<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+<!-- owl carousel css -->
+
+<link href="{% static 'css/owl.carousel.css' %}" rel="stylesheet">
+<link href="{% static 'css/owl.theme.css' %}" rel="stylesheet">
+
+<!-- Theme stylesheet -->
+<link href="{% static 'css/style.default.css' %}" rel="stylesheet" id="theme-stylesheet">
+
+<!-- Custom stylesheet - for your changes -->
+<link href="{% static 'css/custom.css' %}" rel="stylesheet">
+
+<!-- CSS Animations -->
+<link href="{% static 'css/animate.css' %}" rel="stylesheet">
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="{% static 'img/favicon.png' %}">
+
+<!-- Mordernizr -->
+<script src="{% static 'js/modernizr-2.6.2.min.js' %}"></script>
+
+<!-- Responsivity for older IE -->
+<!--[if lt IE 9]>
+<script src="{% static 'js/respond.min.js' %}"></script>
+<![endif]-->
+<meta property="og:title" content="Landing Page | Landing Page Bootstrap Theme by Bootstrapious.com!">
+<meta property="og:site_name" content="Landing Page | Landing Page Bootstrap Theme by Bootstrapious.com!">
+<meta property="og:type" content="website">
+<meta property="og:url" content="">
+
+<meta property="og:image" content="">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="@bootstrapious">
+
+</head>
+
+<body data-spy="scroll" data-target="#navigation" data-offset="120">
+
+
+<!-- *** NAVBAR ***
+_________________________________________________________ -->
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand scrollTo" href="#intro">软件工程在线学习平台</a>
+		</div>
+
+
+			<div class="navbar-collapse collapse" >
+			<ul class="nav navbar-nav navbar-right">
+				<li class="active"><a href="#intro">首页</a>
+				</li>
+				<li><a href="#section1">图谱</a>
+				</li>
+				<li><a href="#section2">搜索</a>
+				</li>
+				<li><a href="#section3">关于我们</a>
+				</li>
+				<li><a href="{% url 'login' %}">登录</a>
+				</li>
+				<li><a href="{% url 'register' %}" style="!important">注册</a>
+				</li>
+			</ul>
+		</div>
+
+
+
+
+		<!--/.nav-collapse -->
+
+	</div>
 </div>
-{% endblock %}
+<!-- /#navbar -->
 
-{% block lslide %}{% endblock %}
+<!-- *** NAVBAR END *** -->
 
-{% block rslide %}{% endblock %}
+<div id="all">
 
-{% block footer %}{% endblock %}
+
+	<!-- *** INTRO IMAGE ***
+_________________________________________________________ -->
+	<div id="intro" class="clearfix">
+		<div class="item">
+			<div class="container">
+				<div class="row">
+
+					<h1 data-animate="fadeInDown">软件工程</h1>
+					<p  class="message" data-animate="fadeInUp">软件工程是一门研究用工程化方法构建和维护有效的、实用的和高质量的软件的学科。 它涉及程序设计语言、数据库、软件开发工具、系统平台、标准、设计模式等方面。</p>
+
+
+					<div class="col-md-6 col-md-offset-3" data-animate="fadeInUp">
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- *** INTRO IMAGE END *** -->
+
+
+
+	<!-- *** SERVICES ***
+_________________________________________________________ -->
+	<div class="section" id="section1">
+		<div class="container">
+			<div class="col-md-12">
+				<h2 class="title" data-animate="fadeInDown">为什么是图谱？</h2>
+
+				<p class="lead">Knowledge Graph</p>
+
+				<div class="row services">
+
+					<div class="col-md-4" data-animate="fadeInUp">
+						<!--<div class="icon"><i class="fa fa-home"></i>
+						</div>-->
+						<div><img src="{% static 'img/graph.png' %}"></div>
+						<h3 class="heading">知识图谱</h3>
+						<p>知识图谱是结构化的语义知识库，用于以符号形式描述物理世界中的概念及相互关系</p>
+					</div>
+
+					<div class="col-md-4" data-animate="fadeInUp">
+						<!--<div class="icon"><i class="fa fa-shopping-cart"></i>
+						</div>-->
+						<div><img src="{% static 'img/knowledge.png' %}"></div>
+						<h3 class="heading">架构</h3>
+						<p>基本单位是“实体-关系-实体”三元组，迭代过程包括信息抽取、知识融合及知识加工</p>
+					</div>
+
+					<div class="col-md-4" data-animate="fadeInUp">
+						<!--<div class="icon"><i class="fa fa-euro"></i>
+						</div>-->
+						<div><img src="{% static 'img/product.png' %}"></div>
+						<h3 class="heading">相关产品</h3>
+						<p>例如：YAGO、Google search Engine、DBpedia</p>
+					</div>
+
+				</div>
+				<a href="{% url 'graph' %}" style="font-size: 20px;">浏览图谱</a>
+
+				<!--<button type="button" class="btn btn-primary" style="width: 100px;" href="#">浏览图谱</button>-->
+
+			</div>
+			<!-- /.12 -->
+		</div>
+		<!-- /.container -->
+	</div>
+	<!-- /.section -->
+
+	<!-- *** SERVICES END *** -->
+
+
+	<!-- *** ABOUT US ***
+_________________________________________________________ -->
+
+	<div class="section  text-gray" id="section2">
+		<div class="container">
+			<div class="col-md-12">
+
+
+				<h2 class="title" data-animate="fadeInDown">搜索最需要的</h2>
+
+				<div class="row">
+
+					<div class="col-md-8 col-md-offset-2">
+
+						<p class="text-large text-thin"  data-animate="fadeInUp">百种课程任你选择，更多详细课程信息为您准备</p>
+						<p class="text-large text-thin"  data-animate="fadeInUp">有关软件工程专业的百余门课程任你搜索，更多与搜索课程相关的课程信息为您提供</p>
+						<a href="{% url 'search' %}" style="font-size: 20px;">开始搜索</a>
+
+						</div>
+
+				</div>
+
+			</div>
+			<!-- /.12 -->
+
+		</div>
+
+		<!-- /.container -->
+	</div>
+<!--	<button type="button" class="btn btn-primary" style="width: 100px;" href="{% url 'search' %}">开始搜素</button>-->
+	<!-- /.section -->
+
+	<!-- *** ABOUT US END *** -->
+
+	<!-- *** JOIN US ***
+_________________________________________________________ -->
+
+
+	<!-- /.section -->
+
+	<!-- *** JOIN US END *** -->
+
+	<!-- *** TESTIMONIALS ***
+_________________________________________________________ -->
+
+	<div class="section text-gray" id="section3" data-animate="fadeInUp">
+
+		<div class="container">
+			<div class="col-md-12">
+
+				<div class="mb20">
+					<h2 class="title" data-animate="fadeInUp">关于我们</h2>
+
+					<p class="lead text-center" data-animate="fadeInUp">我们是初出茅庐的大学生团队，所有相关课程信息及内容都是我们切身经历，绝对真实有价值！若有更多反馈和建议，请发邮件到1234567890@qq.com! </p>
+				</div>
+
+				<ul class="owl-carousel testimonials same-height-row" data-animate="fadeInUp">
+					<li class="item">
+						<div class="testimonial same-height-always">
+							<div class="text">
+								<p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his
+									head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
+							</div>
+							<div class="bottom">
+								<div class="icon"><i class="fa fa-quote-left"></i></div>
+								<div class="name-picture">
+									<img class="" alt="" src="img/person-1.jpg">
+									<h5>John McIntyre</h5>
+									<p>CEO, TransTech</p>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="item">
+						<div class="testimonial same-height-always">
+							<div class="text">
+								<p>The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me? " he thought. It wasn't a dream.</p>
+							</div>
+							<div class="bottom">
+								<div class="icon"><i class="fa fa-quote-left"></i></div>
+								<div class="name-picture">
+									<img class="" alt="" src="img/person-2.jpg">
+									<h5>John McIntyre</h5>
+									<p>CEO, TransTech</p>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="item">
+						<div class="testimonial same-height-always">
+							<div class="text">
+								<p>His room, a proper human room although a little too small, lay peacefully between its four familiar walls.</p>
+
+								<p>A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.</p>
+							</div>
+							<div class="bottom">
+								<div class="icon"><i class="fa fa-quote-left"></i></div>
+								<div class="name-picture">
+									<img class="" alt="" src="img/person-3.jpg">
+									<h5>John McIntyre</h5>
+									<p>CEO, TransTech</p>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="item">
+						<div class="testimonial same-height-always">
+							<div class="text">
+								<p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull weather. Drops of rain could be heard hitting the pane, which made him feel quite sad.</p>
+							</div>
+
+							<div class="bottom">
+								<div class="icon"><i class="fa fa-quote-left"></i></div>
+								<div class="name-picture">
+									<img class="" alt="" src="img/person-4.jpg">
+									<h5>John McIntyre</h5>
+									<p>CEO, TransTech</p>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="item">
+						<div class="testimonial same-height-always">
+							<div class="text">
+								<p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull weather. Drops of rain could be heard hitting the pane, which made him feel quite sad. Gregor then turned to look out the window at the dull weather. Drops of rain could be heard hitting the pane, which made him feel quite sad.</p>
+							</div>
+
+							<div class="bottom">
+								<div class="icon"><i class="fa fa-quote-left"></i></div>
+								<div class="name-picture">
+									<img class="" alt="" src="img/person-4.jpg">
+									<h5>John McIntyre</h5>
+									<p>CEO, TransTech</p>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul> <!-- /.owl-carousel -->
+			</div> <!-- /.12 -->
+		</div> <!-- /.container -->
+
+	</div><!-- /.section -->
+
+	<!-- *** TESTIMONIALS END *** -->
+
+	<!-- *** CONTACT ***
+_________________________________________________________ -->
+
+
+	<!-- /.section -->
+
+
+
+	<!-- *** FOOTER ***
+_________________________________________________________ -->
+
+	<div class="section" id="footer">
+		<div class="container">
+
+			<!--<div class="row">-->
+
+				<!--<div class="col-sm-6"></div>-->
+
+					<!--<p class="social">
+						<a href="#" class="external facebook" data-animate-hover="shake" data-animate="fadeInUp"><i class="fa fa-facebook"></i></a>
+						<a href="#" class="external instagram" data-animate-hover="shake" data-animate="fadeInUp"><i class="fa fa-instagram"></i></a>
+						<a href="#" class="external twitter" data-animate-hover="shake" data-animate="fadeInUp"><i class="fa fa-twitter"></i></a>
+						<a href="mailto:#" class="email" data-animate-hover="shake" data-animate="fadeInUp"><i class="fa fa-envelope"></i></a>
+					</p>-->
+
+				<!-- /.6 -->
+
+				<!--<div class="col-sm-6"></div>-->
+					<div style="text-align: left">
+						<!--<img src="img/people.png">-->
+						<img src="{% static 'img/people.png' %}">
+						<span style="color:white;">关于我们：北邮小组</span>
+					</div>
+					<div style="text-align: left">
+						<img src="{% static 'img/tele.png' %}">
+						<span style="color:white;">联系方式：xxxxxxxxxx@qq.com</span>
+					</div>
+					<div style="text-align: left">
+						<img src="{% static 'img/location.png' %}">
+						<span style="color:white;">地址：北京市西土城路10号</span>
+					</div>
+					<div style="text-align: left">
+					<p style="text-align: left">Copyright &copy; 2019.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>
+					</div>
+
+		</div>
+		<!-- /.container -->
+	</div>
+	<!-- /.section -->
+
+	<!-- *** FOOTER END *** -->
+</div>
+
+<!-- js base -->
+<script src="{% static 'js/jquery-1.11.0.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+<!-- waypoints for scroll spy -->
+<script src="{% static 'js/waypoints.min.js' %}"></script>
+
+<!-- owl carousel -->
+<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+
+<!-- jQuery scroll to -->
+<script src="{% static 'js/jquery.scrollTo.min.js' %}"></script>
+
+<!-- main js file -->
+
+<script src="{% static 'js/front.js' %}"></script>
+
+</body>
+</html>

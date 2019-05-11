@@ -1,41 +1,46 @@
-{% extends "base.html" %}
+{% load static %}
+<html>
+<head>
+<title>Flat Search Box Responsive Widget Template | Home :: w3layouts</title>
+<!-- Custom Theme files -->
+<!-- Custom Theme files -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Flat Search Box Responsive, Login form web template, Sign up Web Templates, Flat Web Templates,
+Login signup Responsive web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<!--Google Fonts-->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<!--Google Fonts-->
 
-{% block title %}搜索{% endblock %}
-{% block is_search_active %}active{% endblock %}
-{% block content %}
-<div class="ui hidden divider"></div>
-<div class="ui container">
-    <div class="ui stacked segments">
-        <div class="ui center aligned segment">
-            <form action="" method="post" class="ui form" id="question_form">
-                {% for field in question_form %}
-                    <div class="ui action left icon input" style="width:600px;">
-                        <i class="search icon"></i>
-                        {{ field }}
-                    </div>
-                {% endfor %}
-                {% csrf_token %}
-                <input type="submit" class="ui large button" value="搜索">
-            </form>
-        </div>
-        <div class="ui center aligned segment">
-            {% ifequal result '' %}
-            <p class="ui header">请输入问题,比如</p>
-            <div class="ui relaxed list">
-                <div class="item">c++程序设计的先修课是什么</div>
-                <div class="item">c语言是谁教的</div>
-                <div class="item">指针的用法</div>
-            </div>
-            {% else %}
-            <div class="ui center aligned  segment">{{ result }}</div>
-            {% endifequal %}
-        </div>
-    </div>
+<link rel="stylesheet" href="{% static 'css/graph.css' %}">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!--search start here-->
+<div class="search">
+	<i> </i>
+	<div class="s-bar">
+
+	   <form id="question_form" action="#" onsubmit="getAdvCourses();return false">
+		<input id="question" name="question" type="text" value="搜索"
+               onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}">
+        <button type="submit">搜索</button>
+	  </form>
+        <p class="lead text-center animated fadeInUp" data-animate="fadeInUp"  id="answer"></p>
+	</div>
 </div>
-{% endblock %}
+<svg width="500" height="300" id="svg1" style="margin-top: -50px;margin-left: 230px;"></svg>
 
-{% block lslide %}{% endblock %}
+<!--search end here-->
+<div class="copyright">
+	 <p>2019  <a href="https://sse.bupt.edu.cn/" target="_blank">  北京邮电大学软件学院</a></p>
+</div>
 
-{% block rslide %}{% endblock %}
+<script src="{% static 'js/jquery.min.js' %}"></script>
+</body>
+<script src="{% static 'js/d3.min.js' %}"></script>
+<script src="{% static 'js/graph.js' %}"></script>
+<script src="{% static 'js/search.js' %}"></script>
 
-{% block footer %}{% endblock %}
+</html>

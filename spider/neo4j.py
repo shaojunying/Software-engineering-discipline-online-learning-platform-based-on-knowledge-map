@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
-from py2neo import *
 from xml.dom import minidom as minidom
+
+from py2neo import *
+
 from setting import *
-import py2neo
 
 
 def get_xml_text_node_value(node, name):

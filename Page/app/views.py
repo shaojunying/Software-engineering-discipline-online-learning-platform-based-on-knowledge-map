@@ -8,7 +8,7 @@ from .models import Course
 
 @login_required
 def index(request):
-    return render(request, 'app/index.html')
+    return render(request, 'index.html')
 
 
 @login_required

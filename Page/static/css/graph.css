@@ -20,7 +20,6 @@
     fill: rgba(108,164,108,.3);
     stroke: rgba(255,255,255,.3);
 }
-
 /*鼠标没有放上去时的文本的线*/
 .texts text.inactive
 {
@@ -31,7 +30,6 @@
     display: none;
 }
 
-
 #title{
     position: absolute;
     top: 50px;
@@ -39,7 +37,7 @@
     color: black;
 }
 
-
+/*
 #search1 input {
     position: absolute;
     top: 220px;
@@ -48,25 +46,51 @@
     border: none;
     /*outline: none;*/
     /*box-shadow: none;*/
-    width: 200px;
+  /*  width: 200px;
     background-color: #666;
+}*/
+
+#search1 input {
+    padding: 0 42px 0 15px;
+    border-bottom: 2px solid transparent;
+    transition: 3s linear;
+    z-index: 2;
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    color: #666;
+    border: none;
+    width: 200px;
+    height: 30px;
+    background-color: #cccccc;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
 }
 
 .texts text {
     /*display: none;*/
     font-size: 13px;
-    color:black;
+    color: black;
 }
 .texts text:hover {
     cursor: pointer;
 }
 
-/*右下角显示课程详细信息的区域*/
+/*左下角显示课程详细信息的区域*/
 #info{
     position: absolute;
-    bottom: 40px;
-    right: 30px;
+    /*bottom: 40px;*/
+    top: 150px;
+   /* right: 30px;*/
+    left: 20px;
     /*text-align: right;*/
     width: 270px;
     color:black;
+   /* position: absolute;
+    bottom: 40px;
+    right: 30px;
+    /*text-align: right;
+    width: 270px;
+    color:black;*/
 }

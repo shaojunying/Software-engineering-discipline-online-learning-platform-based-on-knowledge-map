@@ -1,4 +1,25 @@
-$(document).ready(function () {
+function drawAllNodes(){
+    //获取xml对象
+    let xmlDoc = getDataXML();
+
+    // 设置节点
+    nodes = [];
+    let data = xmlDoc.getElementsByTagName("course");
+    for (let i = 0;i < data.length;i++){
+        nodes.push({
+            name:data[i].childNodes[1].innerHTML,
+            description:data[i].childNodes[3].innerHTML
+        })
+    }
+
+    // 设置节点之间的连线
+    edges = [];
+    data = xmlDoc.getElementsByTagName("item");
+    for (let i=0;i<data.length;i++){
+        edges.push({
+            source:parseInt(data[i].childNodes[1].childNodes[0].nodeValue),
+            target:parseInt(data[i].childNodes[3].childNodes[0].nodeValue)})
+    }
     //选中要显示我们可视化图像的元素
     let svg = d3.select("#svg1"),
         width = +svg.attr("width"),
@@ -11,27 +32,7 @@ $(document).ready(function () {
         .force('collide', d3.forceCollide().radius(() => 10)) // collide 为节点指定一个radius区域来防止节点重叠。
         .force("charge", d3.forceManyBody().strength(-150))
         .force("center", d3.forceCenter(width / 2, height / 2-60));
-    if (window.XMLHttpRequest)
-    {// code for IE7+, Firefox, Chrome, Opera, Safari
-        xmlhttp=new XMLHttpRequest();
-    }
-    else
-    {// code for IE6, IE5
-        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-    }
-    xmlhttp.open("GET","../../static/xml/data.xml",false);
-    xmlhttp.send();
-    xmlDoc=xmlhttp.responseXML;
 
-    // 设置节点
-    nodes = [];
-    let data = xmlDoc.getElementsByTagName("course");
-    for (let i = 0;i < data.length;i++){
-        nodes.push({
-            name:data[i].childNodes[1].innerHTML,
-            description:data[i].childNodes[3].innerHTML
-        })
-    }
 
     let dragging = false;
 
@@ -55,14 +56,7 @@ $(document).ready(function () {
     }
 
 
-    // 设置节点之间的连线
-    edges = [];
-    data = xmlDoc.getElementsByTagName("item");
-    for (let i=0;i<data.length;i++){
-        edges.push({
-            source:parseInt(data[i].childNodes[1].childNodes[0].nodeValue),
-            target:parseInt(data[i].childNodes[3].childNodes[0].nodeValue)})
-    }
+
     let link = svg.append("g")
         .attr("class","links")
         .selectAll("line")
@@ -105,8 +99,7 @@ $(document).ready(function () {
             return "13px";
         })
         .attr("fill", function(d) {
-            // return color(d.group);
-            return "rgba(255,255,255)";
+            return "rgba(0,0,0)";
         })
         .attr('class','inactive')
         .text(function(d) {
@@ -145,7 +138,6 @@ $(document).ready(function () {
             return 'translate(' + d.x + ',' + (d.y) + ')';
         });
     }
-
     // 处理搜索框，实现搜索功能
     $('#search1 input').keyup(function(event) {
         if ($(this).val() == '') {
@@ -177,7 +169,6 @@ $(document).ready(function () {
 
             });
             d3.select('#svg1 .texts').selectAll('text').attr('class', function (d) {
-
                 if (d.name.indexOf(name) >= 0) {
                     return '';
                 } else {
@@ -203,17 +194,16 @@ $(document).ready(function () {
         }
     });
 
+
+
     // 处理鼠标悬浮的情况
     $('#svg1').on('mouseenter','.nodes circle',function (event) {
         if (!dragging) {
             // 获取当前课程的名字
             let name = $(this)[0].attributes.name.nodeValue;
             $('#info h4').text("课程名称: " + name);
-
-
             $('#info p').remove();
-
-            $('#info').append("<p>课程描述:<span>"+$(this)[0].attributes[2].nodeValue+'</span></p>');
+            $('#info').append("<p style='color:#666;font-size:14px'>课程描述:<span>" + $(this)[0].attributes[2].nodeValue + '</span></p>');
 
             d3.select('#svg1 .nodes').selectAll('circle')
                 .attr("class", function (d) {
@@ -258,4 +248,20 @@ $(document).ready(function () {
             });
         }
     });
-});
+
+}
+
+function getDataXML() {
+    if (window.XMLHttpRequest)
+    {// code for IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp=new XMLHttpRequest();
+    }
+    else
+    {// code for IE6, IE5
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.open("GET","../../static/xml/data.xml",false);
+    xmlhttp.send();
+    xmlDoc=xmlhttp.responseXML;
+    return xmlDoc;
+}
